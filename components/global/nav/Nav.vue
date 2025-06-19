@@ -378,9 +378,15 @@ onUnmounted(() => {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.6rem;
   gap: 4px;
   z-index: 1001;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.mobile-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .hamburger-line {
@@ -453,9 +459,9 @@ onUnmounted(() => {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 300px;
+    width: 280px;
     height: 100vh;
-    background: rgba(25, 25, 25, 0.3);
+    background: rgba(25, 25, 25, 0.95);
     flex-direction: column;
     justify-content: center;
     transition: right 0.3s ease;
@@ -471,36 +477,34 @@ onUnmounted(() => {
   
   .nav-list {
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.5rem;
     text-align: center;
+    padding: 2rem 0;
   }
   
   .nav-link {
     font-size: var(--f3);
-    padding: 1rem 0;
+    padding: 1.2rem 0;
+    font-weight: 600;
   }
   
   .mobile-toggle {
     display: flex;
   }
   
-  .nav-cta {
-    order: -1;
-  }
-  
   .cta-button {
-    padding: 0.6rem 1.2rem;
+    padding: 0.55rem 1.1rem;
     font-size: var(--f1);
   }
 }
 
 @media screen and (max-width: 768px) {
   .header {
-    top: 1.5rem;
+    top: 1rem;
   }
   
   .header-scrolled {
-    top: 0.8rem;
+    top: 0.5rem;
     width: 95%;
     max-width: 600px;
     border-radius: 16px;
@@ -515,8 +519,8 @@ onUnmounted(() => {
   }
   
   .logo-image {
-    height: 60px;
-    max-width: 260px;
+    height: 55px;
+    max-width: 240px;
   }
   
   .logo h1 {
@@ -524,31 +528,22 @@ onUnmounted(() => {
   }
   
   .nav-menu {
-    width: 250px;
+    width: 280px;
   }
   
-  .cta-button {
-    padding: 0.5rem 1rem;
-    font-size: var(--f1);
-  }
-  
-  .cta-button span {
-    display: inline;
-  }
-  
-  .cta-icon {
-    width: 16px;
-    height: 16px;
+  /* Ocultar o botão CTA no mobile */
+  .nav-cta {
+    display: none;
   }
 }
 
 @media screen and (max-width: 480px) {
   .header {
-    top: 1.2rem;
+    top: 0.8rem;
   }
   
   .header-scrolled {
-    top: 0.6rem;
+    top: 0.4rem;
     width: 96%;
     max-width: 400px;
     border-radius: 14px;
@@ -559,8 +554,8 @@ onUnmounted(() => {
   }
   
   .logo-image {
-    height: 50px;
-    max-width: 200px;
+    height: 45px;
+    max-width: 180px;
   }
   
   .logo h1 {
@@ -574,6 +569,11 @@ onUnmounted(() => {
   
   .nav-menu-active {
     right: 0;
+  }
+  
+  /* Garantir que o CTA continue oculto */
+  .nav-cta {
+    display: none;
   }
 }
 

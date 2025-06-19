@@ -46,22 +46,21 @@
           <h3>Links Rápidos</h3>
           <ul>
             <li><a href="#inicio">Início</a></li>
-            <li><a href="#sobre">Sobre Nós</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="/sobre">Sobre Nós</a></li>
+            <li><a href="/solucoes">Soluções</a></li>
             <li><a href="/contato">Contato</a></li>
           </ul>
         </div>
 
         <!-- Coluna 3: Serviços -->
         <div class="footer-section services">
-          <h3>Nossos Serviços</h3>
+          <h3>Nossas Soluções</h3>
           <ul>
-            <li><a href="#desenvolvimento">Desenvolvimento Web</a></li>
-            <li><a href="#design">Design UI/UX</a></li>
-            <li><a href="#marketing">Marketing Digital</a></li>
-            <li><a href="#seo">SEO & Analytics</a></li>
-            <li><a href="#consultoria">Consultoria</a></li>
+            <li><a href="/solucoes/geracao-de-leads">Geração de Leads Qualificados</a></li>
+            <li><a href="/solucoes/trafego-pago">Gestão de Tráfego Pago</a></li>
+            <li><a href="/solucoes/desenvolvimento-web">Desenvolvimento Web Estratégico</a></li>
+            <li><a href="/solucoes/crm">Implementação e Otimização de CRM</a></li>
+            <li><a href="/solucoes/analytics">Análise de Dados e Otimização</a></li>
           </ul>
         </div>
 

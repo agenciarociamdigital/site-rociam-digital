@@ -22,16 +22,13 @@
                 <path d="m9 18 6-6-6-6"/>
               </svg>
             </div>
-            
-            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
-              Impulsione 
-              <span class="title-highlight">resultados</span>
-              excepcionais em 
-              <span class="title-emphasis">tempo recorde</span>
+              <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+              Impulsione <span class="title-highlight">resultados</span>
+              <br>em <span class="title-emphasis">tempo recorde</span>
             </h1>
               <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
-              Transformamos desafios em oportunidades com soluções digitais 
-              estratégicas e personalizadas para acelerar o crescimento do seu negócio.
+              Transformamos desafios em oportunidades com soluções digitais
+              <br>estratégicas e personalizadas para acelerar o crescimento.
             </p>
             
             <div class="hero-tech-stack" data-aos="fade-up" data-aos-delay="300">
@@ -880,43 +877,189 @@ onMounted(() => {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .solutions-hero {
-    padding: 6rem 0 2rem 0;
+    padding: 5.5rem 0 2.5rem 0;
+  }
+  
+  .container {
+    padding: 0 1.5rem;
   }
   
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+    line-height: 1.1;
   }
   
   .hero-description {
-    font-size: 1.125rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  
+  .hero-tech-stack {
+    gap: 1.2rem;
+  }
+  
+  .tech-item {
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .solutions-hero {
+    padding: 5rem 0 2rem 0;
+  }
+  
+  .container {
+    padding: 0 1.2rem;
+  }
+  
+  .hero-title {
+    font-size: 2.4rem;
+    line-height: 1.15;
+  }
+  
+  .hero-description {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-badge {
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
   }
   
   .hero-tech-stack {
     gap: 1rem;
+    margin-top: 1.5rem;
   }
   
   .tech-item {
-    padding: 0.75rem;
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+  
+  .tech-icon {
+    width: 18px;
+    height: 18px;
   }
   
   .solution-item {
     grid-template-columns: 1fr;
-    gap: 2rem;
-    margin-bottom: 4rem;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
   }
   
   .solution-content h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   
   .solution-content p {
     font-size: 1rem;
+    line-height: 1.4;
   }
   
   .video-container {
-    height: 200px;
+    height: 180px;
+  }
+  
+  .cta-final {
+    margin-top: 3rem;
+    padding: 2rem 0;
+  }
+  
+  .cta-inner {
+    padding: 2rem 1.5rem;
+  }
+  
+  .cta-title {
+    font-size: 1.8rem;
+  }
+  
+  .cta-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .solutions-hero {
+    padding: 4.5rem 0 1.5rem 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+  
+  .hero-badge {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  .hero-tech-stack {
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .tech-item {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+  
+  .tech-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .solution-item {
+    gap: 1.2rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .solution-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .solution-content p {
+    font-size: 0.9rem;
+  }
+  
+  .video-container {
+    height: 160px;
+  }
+  
+  .cta-final {
+    margin-top: 2.5rem;
+    padding: 1.5rem 0;
+  }
+  
+  .cta-inner {
+    padding: 1.5rem 1rem;
+  }
+  
+  .cta-title {
+    font-size: 1.5rem;
+  }
+  
+  .cta-description {
+    font-size: 0.9rem;
+  }
+  
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
   }
 }
 

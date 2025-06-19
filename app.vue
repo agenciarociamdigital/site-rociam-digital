@@ -21,11 +21,11 @@ useSeoMeta({
   // Title and Description
   title: 'Rociam Digital Tech',
   ogTitle: 'Soluções Digitais para o Seu Negócio',
-  description: 'Descrição do Site',
-  ogDescription: 'Descrição do Site',
+  description: 'Soluções Digitais para o Seu Negócio',
+  ogDescription: 'Soluções Digitais para o Seu Negócio',
   robots: 'index, follow',
   googlebot: 'max-image-preview',
-  author: 'Nome da Empresa',
+  author: 'Rociam Digital Tech',
 
   // Theme
   themeColor: '#ffffff',

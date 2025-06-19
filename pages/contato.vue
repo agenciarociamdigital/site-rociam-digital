@@ -508,27 +508,29 @@ onMounted(() => {
 
 @media screen and (max-width: 768px) {
   .header-spacer {
-    height: 100px;
+    height: 90px;
   }
   
   .contact-hero {
-    padding: 3rem 0;
+    padding: 2.5rem 0;
   }
   
   .container {
-    padding: 0 1rem;
+    padding: 0 1.2rem;
   }
   
   .page-title {
     font-size: var(--f4);
+    line-height: 1.15;
   }
   
   .page-description {
     font-size: var(--f2);
+    line-height: 1.4;
   }
   
   .contact-content {
-    padding: 3rem 0;
+    padding: 2.5rem 0;
   }
   
   .contact-grid {
@@ -542,21 +544,41 @@ onMounted(() => {
   }
   
   .map-wrapper {
-    height: 250px;
+    height: 220px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .header-spacer {
-    height: 80px;
+    height: 70px;
+  }
+  
+  .contact-hero {
+    padding: 2rem 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
   }
   
   .page-title {
     font-size: var(--f3);
+    line-height: 1.2;
   }
   
   .page-description {
     font-size: var(--f1);
+    line-height: 1.3;
+  }
+  
+  .contact-content {
+    padding: 2rem 0;
+  }
+  
+  .contact-form-section,
+  .info-card,
+  .map-container {
+    padding: 1.2rem;
   }
   
   .contact-item {
@@ -576,7 +598,7 @@ onMounted(() => {
   }
   
   .map-wrapper {
-    height: 200px;
+    height: 180px;
   }
 }
 </style>

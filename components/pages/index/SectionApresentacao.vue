@@ -54,19 +54,8 @@ import { onMounted } from 'vue'
 
 // Função para o CTA principal
 const handleStartBuilding = () => {
-  // Scroll para seção de contato ou abrir modal
-  const contactSection = document.getElementById('contato')
-  if (contactSection) {
-    const headerHeight = document.querySelector('.header')?.offsetHeight || 80
-    const elementPosition = contactSection.offsetTop - headerHeight
-    window.scrollTo({ 
-      top: elementPosition, 
-      behavior: 'smooth' 
-    })
-  } else {
-    // Redirecionar para página de contato
-    navigateTo('/contato')
-  }
+  // Redirecionar para página de soluções
+  navigateTo('/solucoes')
 }
 
 // Inicializar animações AOS se disponível
@@ -314,25 +303,28 @@ onMounted(() => {
 @media screen and (max-width: 768px) {
   .hero {
     min-height: 100vh;
-    padding: 7rem 0 3rem;
+    padding: 6rem 0 3.5rem;
   }
   
   .container {
-    padding: 0 1rem;
+    padding: 0 1.2rem;
   }
   
   .hero-title {
     font-size: var(--f5);
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.15;
   }
   
   .hero-description {
     font-size: var(--f2);
     margin-bottom: 2.5rem;
+    line-height: 1.5;
   }
   
   .announcement-badge {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
+    padding: 0.4rem 0.8rem;
   }
   
   .badge-text {
@@ -340,7 +332,7 @@ onMounted(() => {
   }
   
   .cta-primary {
-    padding: 0.8rem 1.5rem;
+    padding: 0.9rem 1.6rem;
     font-size: var(--f2);
   }
   
@@ -355,26 +347,47 @@ onMounted(() => {
 
 @media screen and (max-width: 480px) {
   .hero {
-    padding: 6rem 0 2rem;
+    padding: 5.5rem 0 2.5rem;
+  }
+  
+  .container {
+    padding: 0 1rem;
   }
   
   .hero-title {
     font-size: var(--f4);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
   }
   
   .hero-description {
     font-size: var(--f1);
     margin-bottom: 2rem;
+    line-height: 1.4;
   }
   
   .announcement-badge {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    padding: 0.35rem 0.7rem;
+  }
+  
+  .badge-text {
+    font-size: var(--f0);
+  }
+  
+  .badge-icon {
+    width: 14px;
+    height: 14px;
   }
   
   .cta-primary {
-    padding: 0.7rem 1.2rem;
+    padding: 0.8rem 1.4rem;
     font-size: var(--f1);
+  }
+  
+  .cta-icon {
+    width: 18px;
+    height: 18px;
   }
   
   .hero-video {
