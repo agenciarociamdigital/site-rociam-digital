@@ -130,16 +130,15 @@
                 </div>
               </div>
             </div>
-            <div class="solution-content">
-              <h3>Geração de Leads Qualificados</h3>
+            <div class="solution-content">              <h3>Geração de Leads Qualificados</h3>
               <p>
                 Transformamos visitantes em clientes em potencial com campanhas de marketing digital 
                 altamente segmentadas. Atraímos e engajamos o público certo para o seu negócio, 
                 garantindo leads mais qualificados e aumentando significativamente suas chances 
                 de conversão e crescimento sustentável.
               </p>
-              <NuxtLink to="/contato" class="cta-button">
-                <span>Falar com Especialista</span>
+              <NuxtLink to="/solucoes/geracao-de-leads" class="cta-button">
+                <span>Conheça Agora</span>
                 <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <path d="m9 18 6-6-6-6"/>
                 </svg>
@@ -182,16 +181,15 @@
                 </div>
               </div>
             </div>
-            <div class="solution-content">
-              <h3>Gestão de Tráfego Pago</h3>
+            <div class="solution-content">              <h3>Gestão de Tráfego Pago</h3>
               <p>
                 Maximize sua visibilidade online com campanhas de tráfego pago focadas em resultados 
                 e retorno sobre investimento (ROI). Através das plataformas mais eficazes, atraímos 
                 o público ideal para o seu negócio, garantindo conversões rápidas e impulsionando 
                 suas vendas.
               </p>
-              <NuxtLink to="/contato" class="cta-button">
-                <span>Falar com Especialista</span>
+              <NuxtLink to="/solucoes/trafego-pago" class="cta-button">
+                <span>Conheça Agora</span>
                 <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <path d="m9 18 6-6-6-6"/>
                 </svg>
@@ -236,15 +234,14 @@
                 </div>
               </div>
             </div>
-            <div class="solution-content">
-              <h3>Desenvolvimento Web Estratégico</h3>
+            <div class="solution-content">              <h3>Desenvolvimento Web Estratégico</h3>
               <p>
                 Desenvolvemos sites institucionais, landing pages e páginas de vendas de alta 
                 performance, totalmente personalizados para os seus objetivos. Criamos experiências 
                 digitais que convertem visitantes em clientes e fortalecem sua presença online.
               </p>
-              <NuxtLink to="/contato" class="cta-button">
-                <span>Falar com Especialista</span>
+              <NuxtLink to="/solucoes/desenvolvimento-web" class="cta-button">
+                <span>Conheça Agora</span>
                 <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <path d="m9 18 6-6-6-6"/>
                 </svg>
@@ -289,16 +286,15 @@
                 </div>
               </div>
             </div>
-            <div class="solution-content">
-              <h3>Implementação e Otimização de CRM</h3>
+            <div class="solution-content">              <h3>Implementação e Otimização de CRM</h3>
               <p>
                 Otimize a gestão dos seus leads e clientes com a implementação de sistemas de CRM 
                 personalizados e integrados. Centralize informações, automatize processos e construa 
                 relacionamentos duradouros, impulsionando a eficiência da sua equipe e aumentando 
                 as taxas de conversão.
               </p>
-              <NuxtLink to="/contato" class="cta-button">
-                <span>Falar com Especialista</span>
+              <NuxtLink to="/solucoes/crm" class="cta-button">
+                <span>Conheça Agora</span>
                 <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <path d="m9 18 6-6-6-6"/>
                 </svg>
@@ -343,16 +339,15 @@
                 </div>
               </div>
             </div>
-            <div class="solution-content">
-              <h3>Análise de Dados e Otimização</h3>
+            <div class="solution-content">              <h3>Análise de Dados e Otimização</h3>
               <p>
                 Transforme dados brutos em decisões estratégicas com nossas soluções avançadas de 
                 analytics. Monitoramos e analisamos o desempenho de suas campanhas, extraindo insights 
                 valiosos para otimizar suas ações de marketing, reduzir custos e alcançar melhores 
                 resultados em tempo real.
               </p>
-              <NuxtLink to="/contato" class="cta-button">
-                <span>Falar com Especialista</span>
+              <NuxtLink to="/solucoes/analytics" class="cta-button">
+                <span>Conheça Agora</span>
                 <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <path d="m9 18 6-6-6-6"/>
                 </svg>
