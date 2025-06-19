@@ -1,0 +1,19 @@
+@import url('./variaveis.css');
+@import url('./fontes.css');
+@import url('./normalizar.css');
+
+/* Layout Global - Header transparente no topo */
+body {
+  padding-top: 0;
+}
+
+/* Layout para o conteúdo principal */
+main {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Scroll suave para toda a aplicação */
+html {
+  scroll-behavior: smooth;
+}

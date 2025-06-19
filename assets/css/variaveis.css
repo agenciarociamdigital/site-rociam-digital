@@ -1,0 +1,50 @@
+/* Paleta de Cores - Rociam Digital */
+:root {
+  /* === CORES DA MARCA === */
+  /* Azul Digital - Cor primária */
+  --azul-digital: #0033FF;
+  --azul-digital-rgb: 0, 51, 255;
+  
+  /* Verde Conectado - Cor secundária */
+  --verde-conectado: #00CC99;
+  --verde-conectado-rgb: 0, 204, 153;
+  
+  /* Cinza Sólido - Texto e fundos */
+  --cinza-solido: #333333;
+  --cinza-solido-rgb: 51, 51, 51;
+  
+  /* === CORES COMPLEMENTARES === */
+  --cor-preto: #000000;
+  --cor-branco: #ffffff;
+  --cor-gelo: #f8f9fa;
+  
+  /* === COMPATIBILIDADE COM CÓDIGO EXISTENTE === */
+  --cor-azul: #0033FF; /* Azul Digital */
+  --cor-azul-escuro: #001f99; /* Versão mais escura do azul digital */
+  --cor-laranja: #00CC99; /* Verde Conectado (substituindo laranja) */
+  --cor-laranja-escuro: #009973; /* Versão mais escura do verde */
+  --cor-cinza: #333333; /* Cinza Sólido */
+  --cor-cinza-2: #666666; /* Cinza médio */
+  --cor-cinza-3: #999999; /* Cinza claro */
+
+  /* === TIPOGRAFIA === */
+  --light: 'figtree-light';
+  --regular: 'figtree-regular';
+  --bold: 'figtree-bold';
+
+  /* === TAMANHOS DE FONTE RESPONSIVOS === */
+  --f0: clamp(0.6rem, 1vw, 0.8rem);
+  --f1: clamp(0.8rem, 1vw, 1rem);
+  --f2: clamp(1rem, 1vw, 1.2rem);
+  --f3: clamp(1.2rem, 1vw, 1.5rem);
+  --f4: clamp(1.5rem, 1vw, 2rem);
+  --f5: clamp(2rem, 1vw, 2.5rem);
+  --f6: clamp(2.5rem, 1vw, 3.5rem);
+  --f7: clamp(3.5rem, 1vw, 5.5rem);
+
+  /* === LAYOUT - ALTURAS DO HEADER === */
+  --header-height: 56px;
+  --header-height-tablet: 50px;
+  --header-height-mobile: 46px;
+  --header-height-mobile-small: 42px;
+}
