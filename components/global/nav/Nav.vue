@@ -73,10 +73,12 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { useContactPopupStore } from '@/stores/contactPopupStore'
 
 // Estados reativos
 const isScrolled = ref(false)
 const isMobileMenuOpen = ref(false)
+const contactPopupStore = useContactPopupStore()
 
 // Função para detectar scroll
 const handleScroll = () => {
@@ -102,20 +104,12 @@ const closeMobileMenu = () => {
 
 // Função para o botão CTA
 const handleContactClick = () => {
-  // Aqui você pode adicionar a lógica do botão
-  // Por exemplo: scroll para seção de contato, abrir modal, etc.
-  const contactSection = document.getElementById('contato')
-  if (contactSection) {
-    // Ajusta o scroll considerando a altura do header
-    const headerHeight = document.querySelector('.header')?.offsetHeight || 80
-    const elementPosition = contactSection.offsetTop - headerHeight
-    window.scrollTo({ 
-      top: elementPosition, 
-      behavior: 'smooth' 
-    })
-  } else {
-    // Se não houver seção, redireciona para página de contato
-    navigateTo('/contato')
+  // Abrir o popup de contato
+  contactPopupStore.openPopup()
+  
+  // Fechar o menu mobile se estiver aberto
+  if (isMobileMenuOpen.value) {
+    closeMobileMenu()
   }
 }
 

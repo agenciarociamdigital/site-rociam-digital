@@ -1,6 +1,7 @@
 <template>
   <NuxtLayout>
     <Whatsapp />
+    <ContactPopup :isOpen="contactPopupStore.isOpen" @close="contactPopupStore.closePopup" />
     <NuxtPage />
   </NuxtLayout>
 </template>
@@ -9,8 +10,11 @@
 import { watch } from 'vue'
 import { useRouter } from 'vue-router'
 import Whatsapp from '@/components/global/whatsapp/Whatsapp.vue'
+import ContactPopup from '@/components/global/contact/ContactPopup.vue'
+import { useContactPopupStore } from '@/stores/contactPopupStore'
 
 const router = useRouter()
+const contactPopupStore = useContactPopupStore()
 
 useSeoMeta({
   // Default
