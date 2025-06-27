@@ -122,18 +122,31 @@ const updateHeaderHeight = () => {
   }
 }
 
+// Função para lidar com redimensionamento da tela
+const handleResize = () => {
+  updateHeaderHeight()
+  
+  // Fechar menu mobile automaticamente em telas maiores que 768px
+  if (window.innerWidth > 768 && isMobileMenuOpen.value) {
+    closeMobileMenu()
+  }
+}
+
 // Lifecycle hooks
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
+  window.addEventListener('resize', handleResize)
   updateHeaderHeight()
-  // Atualiza altura do header em redimensionamentos
-  window.addEventListener('resize', updateHeaderHeight)
 })
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
-  window.removeEventListener('resize', updateHeaderHeight)
+  window.removeEventListener('resize', handleResize)
   document.body.style.overflow = 'auto'
+  // Garantir que o menu seja fechado ao desmontar o componente
+  if (isMobileMenuOpen.value) {
+    closeMobileMenu()
+  }
 })
 </script>
 
@@ -440,9 +453,58 @@ onUnmounted(() => {
   }
 }
 
-@media screen and (max-width: 968px) {
+/* Tablets - garantir menu desktop */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .mobile-toggle {
+    display: none !important;
+  }
+  
+  .nav-menu {
+    display: flex !important;
+    position: static !important;
+    background: transparent !important;
+    width: auto !important;
+    height: auto !important;
+    flex-direction: row !important;
+  }
+  
+  .nav-list {
+    flex-direction: row !important;
+    gap: 1rem !important;
+    padding: 0 !important;
+  }
+  
+  .nav-link {
+    font-size: var(--f1) !important;
+    padding: 0.25rem 0 !important;
+    font-weight: 500 !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
+  .header {
+    top: 1rem;
+  }
+  
+  .header-scrolled {
+    top: 0.5rem;
+    width: 95%;
+    max-width: 600px;
+    border-radius: 16px;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
   .navbar {
-    height: var(--header-height-tablet);
+    height: var(--header-height-mobile);
+  }
+  
+  .logo-image {
+    height: 55px;
+    max-width: 240px;
   }
   
   .logo h1 {
@@ -490,45 +552,12 @@ onUnmounted(() => {
     padding: 0.55rem 1.1rem;
     font-size: var(--f1);
   }
-}
 
-@media screen and (max-width: 768px) {
-  .header {
-    top: 1rem;
-  }
-  
-  .header-scrolled {
-    top: 0.5rem;
-    width: 95%;
-    max-width: 600px;
-    border-radius: 16px;
-  }
-  
-  .container {
-    padding: 0 1rem;
-  }
-  
-  .navbar {
-    height: var(--header-height-mobile);
-  }
-  
-  .logo-image {
-    height: 55px;
-    max-width: 240px;
-  }
-  
-  .logo h1 {
-    font-size: var(--f2);
-  }
-  
-  .nav-menu {
-    width: 280px;
-  }
-  
   /* Ocultar o botão CTA no mobile */
   .nav-cta {
     display: none;
   }
+}
 }
 
 @media screen and (max-width: 480px) {

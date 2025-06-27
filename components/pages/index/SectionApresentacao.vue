@@ -1,6 +1,17 @@
 <template>
   <section class="hero">
-    
+    <!-- Background Image -->
+    <div class="hero-background"></div>
+    <!-- Background Overlay -->
+    <div class="hero-overlay"></div>
+    <!-- Efeito Blocos de Vidro -->
+    <div class="glass-blocks-overlay"></div>
+    <!-- Partículas decorativas -->
+    <div class="particles">
+      <div class="particle particle-1"></div>
+      <div class="particle particle-2"></div>
+      <div class="particle particle-3"></div>
+    </div>
     
     <div class="container">
       <!-- Badge de Anúncio -->
@@ -57,31 +68,6 @@ onMounted(() => {
       offset: 50
     })
   }
-  
-  // Otimizações para o vídeo de background
-  const heroVideo = document.querySelector('.hero-video')
-  if (heroVideo) {
-    // Adicionar atributos de otimização
-    heroVideo.setAttribute('preload', 'metadata')
-    
-    // Detectar conexão lenta e reduzir qualidade se necessário
-    if (navigator.connection && navigator.connection.effectiveType === 'slow-2g') {
-      heroVideo.style.display = 'none'
-    }
-    
-    // Pausar vídeo quando não estiver visível (economizar bateria)
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          heroVideo.play()
-        } else {
-          heroVideo.pause()
-        }
-      })
-    })
-    
-    observer.observe(heroVideo)
-  }
 })
 </script>
 
@@ -97,20 +83,25 @@ onMounted(() => {
   overflow: hidden;
 }
 
-/* Video Background */
-.hero-video {
+/* Background Image */
+.hero-background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  opacity: 0.3;
+  background-image: url('/assets/images/pexels-pixabay-315938.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.4;
   z-index: 0;
+  animation: subtle-movement 12s ease-in-out infinite;
+  transform-origin: center center;
 }
 
-/* Video Overlay */
-.hero-video-overlay {
+/* Background Overlay */
+.hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -118,6 +109,194 @@ onMounted(() => {
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
+}
+
+/* Efeito Blocos de Vidro - Glassmorphism Sutil */
+.glass-blocks-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    /* Blocos de vidro grandes */
+    linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%),
+    linear-gradient(45deg, rgba(0, 204, 153, 0.08) 0%, transparent 70%),
+    linear-gradient(-45deg, rgba(0, 51, 255, 0.06) 0%, transparent 60%);
+  background-size: 
+    200px 200px,
+    150px 150px,
+    180px 180px;
+  background-position: 
+    0 0,
+    100px 50px,
+    50px 100px;
+  backdrop-filter: blur(1px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+  opacity: 0.7;
+  z-index: 2;
+  animation: glass-float 20s ease-in-out infinite;
+  pointer-events: none;
+  mask: 
+    radial-gradient(circle at 20% 30%, black 40px, transparent 42px),
+    radial-gradient(circle at 70% 60%, black 35px, transparent 37px),
+    radial-gradient(circle at 40% 80%, black 45px, transparent 47px),
+    radial-gradient(circle at 80% 20%, black 30px, transparent 32px),
+    radial-gradient(circle at 10% 70%, black 38px, transparent 40px);
+  mask-composite: add;
+  -webkit-mask: 
+    radial-gradient(circle at 20% 30%, black 40px, transparent 42px),
+    radial-gradient(circle at 70% 60%, black 35px, transparent 37px),
+    radial-gradient(circle at 40% 80%, black 45px, transparent 47px),
+    radial-gradient(circle at 80% 20%, black 30px, transparent 32px),
+    radial-gradient(circle at 10% 70%, black 38px, transparent 40px);
+  -webkit-mask-composite: source-over;
+}
+
+@keyframes glass-float {
+  0% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.7;
+  }
+  25% {
+    transform: translateY(-5px) translateX(3px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-8px) translateX(-2px);
+    opacity: 0.6;
+  }
+  75% {
+    transform: translateY(-3px) translateX(2px);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.7;
+  }
+}
+
+/* Efeito de movimento sutil */
+@keyframes subtle-movement {
+  0% {
+    transform: scale(1) translateX(0px);
+  }
+  25% {
+    transform: scale(1.02) translateX(-8px);
+  }
+  50% {
+    transform: scale(1.04) translateX(-15px);
+  }
+  75% {
+    transform: scale(1.02) translateX(-8px);
+  }
+  100% {
+    transform: scale(1) translateX(0px);
+  }
+}
+
+/* Partículas decorativas */
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--verde-conectado), var(--azul-digital));
+  opacity: 0.3;
+  box-shadow: 0 0 10px rgba(0, 204, 153, 0.5);
+}
+
+.particle-1 {
+  width: 6px;
+  height: 6px;
+  top: 20%;
+  left: 10%;
+  animation: float-up-1 8s linear infinite;
+}
+
+.particle-2 {
+  width: 8px;
+  height: 8px;
+  top: 60%;
+  right: 15%;
+  animation: float-up-2 10s linear infinite;
+}
+
+.particle-3 {
+  width: 4px;
+  height: 4px;
+  top: 80%;
+  left: 70%;
+  animation: float-up-3 12s linear infinite;
+}
+
+@keyframes float-up-1 {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(-300px) translateX(50px);
+    opacity: 0;
+  }
+}
+
+@keyframes float-up-2 {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.7;
+  }
+  85% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-250px) translateX(-30px);
+    opacity: 0;
+  }
+}
+
+@keyframes float-up-3 {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-200px) translateX(-80px);
+    opacity: 0;
+  }
 }
 
 .container {
@@ -252,14 +431,20 @@ onMounted(() => {
   transform: translateX(3px);
 }
 
-/* Otimizações de performance e acessibilidade para o vídeo */
+/* Otimizações de performance e acessibilidade */
 @media (prefers-reduced-motion: reduce) {
-  .hero-video {
-    display: none;
+  .hero-background {
+    opacity: 0.3;
+    animation: none;
   }
   
-  .hero {
-    background: #000000;
+  .glass-blocks-overlay {
+    animation: none;
+    opacity: 0.3;
+  }
+  
+  .particles {
+    display: none;
   }
 }
 
@@ -324,12 +509,22 @@ onMounted(() => {
     font-size: var(--f2);
   }
   
-  .hero-video {
+  .hero-background {
     opacity: 0.2; /* Reduz opacidade em mobile para melhor legibilidade */
+    animation-duration: 30s; /* Movimento mais lento em mobile */
   }
   
-  .hero-video-overlay {
+  .hero-overlay {
     background: rgba(0, 0, 0, 0.6); /* Escurece mais o overlay em mobile */
+  }
+  
+  .glass-blocks-overlay {
+    opacity: 0.4; /* Reduz intensidade do efeito de vidro em tablet */
+    background-size: 120px 120px, 90px 90px, 110px 110px; /* Blocos menores */
+  }
+  
+  .particles {
+    opacity: 0.5; /* Reduz intensidade das partículas em tablet */
   }
 }
 
@@ -378,12 +573,23 @@ onMounted(() => {
     height: 18px;
   }
   
-  .hero-video {
+  .hero-background {
     opacity: 0.15; /* Ainda mais sutil em telas pequenas */
+    animation-duration: 40s; /* Ainda mais lento em mobile */
   }
   
-  .hero-video-overlay {
+  .hero-overlay {
     background: rgba(0, 0, 0, 0.7);
+  }
+  
+  .glass-blocks-overlay {
+    opacity: 0.3; /* Muito sutil em mobile */
+    background-size: 80px 80px, 60px 60px, 70px 70px; /* Blocos ainda menores */
+    animation-duration: 25s; /* Movimento mais lento */
+  }
+  
+  .particles {
+    display: none; /* Remove partículas em telas muito pequenas */
   }
 }
 </style>
