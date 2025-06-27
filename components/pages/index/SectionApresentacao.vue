@@ -1,18 +1,6 @@
 <template>
   <section class="hero">
-    <!-- Video Background -->
-    <video 
-      class="hero-video" 
-      autoplay 
-      muted 
-      loop 
-      playsinline
-    >
-      <source src="~/assets/videos/rociamdigitaltechbachground.mp4" type="video/mp4">
-    </video>
     
-    <!-- Video Overlay -->
-    <div class="hero-video-overlay"></div>
     
     <div class="container">
       <!-- Badge de Anúncio -->

@@ -3,7 +3,7 @@
     <Nav />
     <main>
       <SectionApresentacao />
-      <!-- Aqui você pode adicionar mais seções -->
+      <InteractiveSection />
     </main>
     <Footer />
   </div>
@@ -11,4 +11,5 @@
 
 <script setup>
 import SectionApresentacao from '@/components/pages/index/SectionApresentacao.vue'
+import InteractiveSection from '@/components/pages/index/InteractiveSection.vue'
 </script>

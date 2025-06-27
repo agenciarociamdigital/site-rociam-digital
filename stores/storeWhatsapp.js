@@ -13,3 +13,4 @@ export const useStoreWhatsapp = defineStore('storeWhatsapp', () => {
     abrirLink
   }
 })
+

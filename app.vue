@@ -40,11 +40,11 @@ useSeoMeta({
   ogType: 'website',
   ogImageType: 'image/jpeg',
   ogImage: '',
-  ogUrl: 'https://seusite.com.br',
-  ogSiteName: 'Nome do Site',
+  ogUrl: 'https://rociamdigital.com',
+  ogSiteName: 'Rociam Digital Tech',
   ogLocale: 'pt_BR',
-  applicationName: 'Nome do Site',
-  appleMobileWebAppTitle: 'Nome do Site'
+  applicationName: 'Rociam Digital Tech',
+  appleMobileWebAppTitle: 'Rociam Digital Tech'
 })
 
 watch(router.afterEach, () => {
