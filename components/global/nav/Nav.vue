@@ -87,12 +87,18 @@ const handleScroll = () => {
 
 // Função para alternar menu mobile
 const toggleMobileMenu = () => {
-  isMobileMenuOpen.value = !isMobileMenuOpen.value
-  // Previne scroll do body quando menu está aberto
-  if (isMobileMenuOpen.value) {
-    document.body.style.overflow = 'hidden'
+  // Só permitir alternar o menu em telas mobile (até 768px)
+  if (window.innerWidth <= 768) {
+    isMobileMenuOpen.value = !isMobileMenuOpen.value
+    // Previne scroll do body quando menu está aberto
+    if (isMobileMenuOpen.value) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
   } else {
-    document.body.style.overflow = 'auto'
+    // Garantir que o menu esteja fechado em telas maiores
+    closeMobileMenu()
   }
 }
 
@@ -130,13 +136,23 @@ const handleResize = () => {
   if (window.innerWidth > 768 && isMobileMenuOpen.value) {
     closeMobileMenu()
   }
+  
+  // Verificação defensiva - garantir que o menu esteja fechado ao iniciar em mobile
+  if (window.innerWidth <= 768 && isMobileMenuOpen.value && !document.querySelector('.mobile-toggle-active')) {
+    closeMobileMenu()
+  }
 }
 
 // Lifecycle hooks
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
   window.addEventListener('resize', handleResize)
+  // Inicializar altura do header
   updateHeaderHeight()
+  // Garantir que o menu esteja fechado ao iniciar
+  isMobileMenuOpen.value = false
+  // Verificar dimensões iniciais
+  handleResize()
 })
 
 onUnmounted(() => {
@@ -454,7 +470,8 @@ onUnmounted(() => {
 }
 
 /* Tablets - garantir menu desktop */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) {
+  /* Força menu desktop em telas maiores que 768px */
   .mobile-toggle {
     display: none !important;
   }
@@ -466,6 +483,11 @@ onUnmounted(() => {
     width: auto !important;
     height: auto !important;
     flex-direction: row !important;
+    right: 0 !important; /* Garante que o menu esteja visível */
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    border: none !important;
+    overflow: visible !important;
   }
   
   .nav-list {
@@ -481,7 +503,6 @@ onUnmounted(() => {
   }
 }
 
-@media screen and (max-width: 768px) {
 @media screen and (max-width: 768px) {
   .header {
     top: 1rem;
@@ -514,17 +535,20 @@ onUnmounted(() => {
   .nav-menu {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: -100%; /* Começa fora da tela */
     width: 280px;
     height: 100vh;
     background: rgba(25, 25, 25, 0.95);
     flex-direction: column;
     justify-content: center;
-    transition: right 0.3s ease;
+    transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1); /* Easing mais suave */
     box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     backdrop-filter: blur(40px) saturate(180%);
     border-left: 1px solid rgba(255, 255, 255, 0.1);
+    overflow-y: auto; /* Permitir rolagem em menus grandes */
+    transform: translateZ(0); /* Força aceleração de hardware */
+    will-change: right; /* Otimiza desempenho de animação */
   }
   
   .nav-menu-active {
@@ -557,7 +581,6 @@ onUnmounted(() => {
   .nav-cta {
     display: none;
   }
-}
 }
 
 @media screen and (max-width: 480px) {
