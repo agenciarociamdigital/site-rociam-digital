@@ -33,7 +33,7 @@
             
             <form @submit.prevent="handleSubmit" class="contact-form">
               <div class="form-group">
-                <label for="name">Nome Completo</label>
+                <label for="name">Nome Completo *</label>
                 <input 
                   type="text" 
                   id="name"
@@ -44,7 +44,7 @@
               </div>
               
               <div class="form-group">
-                <label for="email">E-mail</label>
+                <label for="email">E-mail *</label>
                 <input 
                   type="email" 
                   id="email"
@@ -55,17 +55,18 @@
               </div>
               
               <div class="form-group">
-                <label for="phone">Telefone</label>
+                <label for="phone">Telefone *</label>
                 <input 
                   type="tel" 
                   id="phone"
                   v-model="form.phone"
                   placeholder="(00) 00000-0000"
+                  required
                 >
               </div>
               
               <div class="form-group">
-                <label for="subject">Assunto</label>
+                <label for="subject">Assunto *</label>
                 <select id="subject" v-model="form.subject" required>
                   <option value="">Selecione um assunto</option>
                   <option value="desenvolvimento">Desenvolvimento Web</option>
@@ -77,7 +78,7 @@
               </div>
               
               <div class="form-group">
-                <label for="message">Mensagem</label>
+                <label for="message">Mensagem *</label>
                 <textarea 
                   id="message"
                   v-model="form.message"
@@ -99,6 +100,22 @@
                 </svg>
               </button>
             </form>
+          </div>
+
+          <!-- Popup de Confirmação -->
+          <div v-if="showSuccessPopup" class="popup-overlay" @click="closePopup">
+            <div class="popup-content" @click.stop>
+              <div class="popup-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+              </div>
+              <h3>Mensagem Enviada!</h3>
+              <p>Sua mensagem foi enviada com sucesso. Retornaremos o contato em breve!</p>
+              <button @click="closePopup" class="popup-button">
+                Fechar
+              </button>
+            </div>
           </div>
 
           <!-- Informações de Contato -->
@@ -187,29 +204,85 @@ const form = ref({
 })
 
 const isSubmitting = ref(false)
+const showSuccessPopup = ref(false)
+
+// Função para fechar o popup
+const closePopup = () => {
+  showSuccessPopup.value = false
+}
 
 // Função para submeter o formulário
 const handleSubmit = async () => {
   isSubmitting.value = true
   
   try {
-    // Simular envio (substituir por integração real)
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    // Validar se todos os campos obrigatórios estão preenchidos
+    if (!form.value.name || !form.value.email || !form.value.phone || !form.value.subject || !form.value.message) {
+      alert('Por favor, preencha todos os campos obrigatórios.')
+      return
+    }
     
-    // Feedback de sucesso
-    alert('Mensagem enviada com sucesso! Retornaremos em breve.')
+    // Preparar dados para o webhook do CRM
+    const webhookData = {
+      name: form.value.name.trim(),
+      email: form.value.email.trim(),
+      phone: form.value.phone.trim(),
+      subject: form.value.subject,
+      message: form.value.message.trim(),
+      source: 'Website Rociam Digital',
+      timestamp: new Date().toISOString()
+    }
     
-    // Limpar formulário
-    form.value = {
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: ''
+    console.log('Enviando dados:', webhookData)
+    
+    // Enviar para o webhook do CRM
+    const response = await fetch('https://services.leadconnectorhq.com/hooks/OENr4Dm8dvAwqM3OCwUk/webhook-trigger/f2f45ccd-4627-4134-94b1-02e29e155447', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(webhookData)
+    })
+    
+    console.log('Resposta do webhook:', response.status, response.statusText)
+    
+    if (response.ok) {
+      const result = await response.text()
+      console.log('Resultado:', result)
+      
+      // Limpar formulário
+      form.value = {
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: ''
+      }
+      
+      // Mostrar popup de sucesso APENAS se o envio foi bem-sucedido
+      showSuccessPopup.value = true
+    } else {
+      // Se o webhook retornou erro, não mostrar popup de sucesso
+      throw new Error(`Erro HTTP: ${response.status} - ${response.statusText}`)
     }
     
   } catch (error) {
-    alert('Erro ao enviar mensagem. Tente novamente.')
+    console.error('Erro ao enviar formulário:', error)
+    
+    // Fallback: abrir email com dados preenchidos
+    const mailtoLink = `mailto:contato@rociamdigital.com?subject=${encodeURIComponent(form.value.subject)}&body=${encodeURIComponent(`
+Nome: ${form.value.name}
+Email: ${form.value.email}
+Telefone: ${form.value.phone}
+Assunto: ${form.value.subject}
+
+Mensagem:
+${form.value.message}
+    `)}`
+    
+    alert('Erro ao enviar mensagem. Clique OK para abrir seu email com a mensagem preenchida.')
+    window.open(mailtoLink, '_blank')
+    
   } finally {
     isSubmitting.value = false
   }
@@ -599,6 +672,130 @@ onMounted(() => {
   
   .map-wrapper {
     height: 180px;
+  }
+}
+
+/* Popup de Confirmação */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+}
+
+.popup-content {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 3rem;
+  backdrop-filter: blur(20px);
+  text-align: center;
+  max-width: 400px;
+  margin: 2rem;
+  animation: slideUp 0.3s ease;
+}
+
+.popup-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--verde-conectado) 0%, var(--azul-digital) 100%);
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  color: var(--cor-branco);
+}
+
+.popup-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.popup-content h3 {
+  font-family: var(--bold);
+  font-size: var(--f3);
+  color: var(--cor-branco);
+  margin-bottom: 1rem;
+}
+
+.popup-content p {
+  font-family: var(--regular);
+  font-size: var(--f2);
+  color: var(--cor-gelo);
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.popup-button {
+  background: linear-gradient(135deg, var(--azul-digital) 0%, var(--verde-conectado) 100%);
+  color: var(--cor-branco);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-family: var(--bold);
+  font-size: var(--f2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.popup-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 51, 255, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade do Popup */
+@media screen and (max-width: 768px) {
+  .popup-content {
+    padding: 2rem;
+    margin: 1rem;
+  }
+  
+  .popup-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .popup-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .popup-content h3 {
+    font-size: var(--f2);
+  }
+  
+  .popup-content p {
+    font-size: var(--f1);
   }
 }
 </style>
