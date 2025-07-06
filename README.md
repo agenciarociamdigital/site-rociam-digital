@@ -1,9 +1,3 @@
-# 🚀 Projeto NuxtJS - Base EduSites
-
-Este é um projeto base em **NuxtJS 3** desenvolvido e utilizado pelo **EduSites**. Aqui você encontrará tudo o que precisa para configurar, rodar e preparar o projeto para produção com eficiência.
-
----
-
 ## 📖 Documentação
 
 Para mais informações sobre o framework utilizado, consulte a **[documentação oficial do Nuxt 3](https://nuxt.com/docs/getting-started/introduction)**.
@@ -78,16 +72,3 @@ Comandos úteis para desenvolvimento e produção:
 - `pnpm run dev` → Inicia o servidor de desenvolvimento
 - `pnpm run generate` → Gera o build para produção
 - `pnpm run preview` → Visualiza o build localmente antes do deploy
-
----
-
-## 🔗 Conecte-se Comigo!
-
-Me acompanhe para mais conteúdos sobre desenvolvimento web!
-
-📸 **Instagram:** [@edusites](https://www.instagram.com/edusites)
-📺 **YouTube:** [@eduardosites](https://www.youtube.com/@eduardosites)
-
----
-
-🔥 **Desenvolvido por [EduSites](https://www.instagram.com/edusites) – Transformando ideias em código!** 🚀
