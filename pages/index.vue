@@ -11,5 +11,4 @@
 
 <script setup>
 import SectionApresentacao from '@/components/pages/index/SectionApresentacao.vue'
-import InteractiveSection from '@/components/pages/index/InteractiveSection.vue'
 </script>

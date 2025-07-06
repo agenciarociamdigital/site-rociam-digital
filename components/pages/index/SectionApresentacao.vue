@@ -30,8 +30,7 @@
         </h1>
         
         <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
-          Componentes altamente personalizáveis para construir sites modernos
-          e aplicações que impressionam e convertem da forma que você deseja.
+          Web, Leads, CRM e Automação com IA: Tudo para Empresas que Lideram o Mercado.
         </p>
 
         <!-- CTA Button -->
@@ -312,12 +311,12 @@ onMounted(() => {
 .announcement-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.1rem;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50px;
-  padding: 0.5rem 1rem;
-  margin-bottom: 3rem;
+  padding: 0.35rem 0.8rem;
+  margin-bottom: 2.5rem;
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
 }
@@ -386,17 +385,17 @@ onMounted(() => {
 .cta-primary {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.7rem;
   background: linear-gradient(135deg, var(--azul-digital) 0%, var(--verde-conectado) 100%);
   color: var(--cor-branco);
   border: none;
-  padding: 1rem 2rem;
-  border-radius: 12px;
+  padding: 1.3rem 2.5rem;
+  border-radius: 14px;
   font-family: var(--bold);
-  font-size: var(--f3);
+  font-size: var(--f4);
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 30px rgba(255, 139, 65, 0.3);
+  box-shadow: 0 12px 40px rgba(255, 139, 65, 0.4);
   position: relative;
   overflow: hidden;
 }
@@ -469,7 +468,8 @@ onMounted(() => {
   }
   
   .announcement-badge {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
+    padding: 0.3rem 0.7rem;
   }
 }
 
@@ -496,8 +496,8 @@ onMounted(() => {
   }
   
   .announcement-badge {
-    margin-bottom: 2rem;
-    padding: 0.4rem 0.8rem;
+    margin-bottom: 1.5rem;
+    padding: 0.3rem 0.6rem;
   }
   
   .badge-text {
@@ -505,8 +505,8 @@ onMounted(() => {
   }
   
   .cta-primary {
-    padding: 0.9rem 1.6rem;
-    font-size: var(--f2);
+    padding: 1.2rem 2.2rem;
+    font-size: var(--f3);
   }
   
   .hero-background {
@@ -550,8 +550,8 @@ onMounted(() => {
   }
   
   .announcement-badge {
-    margin-bottom: 1.5rem;
-    padding: 0.35rem 0.7rem;
+    margin-bottom: 1.2rem;
+    padding: 0.25rem 0.5rem;
   }
   
   .badge-text {
@@ -564,8 +564,8 @@ onMounted(() => {
   }
   
   .cta-primary {
-    padding: 0.8rem 1.4rem;
-    font-size: var(--f1);
+    padding: 1rem 1.8rem;
+    font-size: var(--f2);
   }
   
   .cta-icon {

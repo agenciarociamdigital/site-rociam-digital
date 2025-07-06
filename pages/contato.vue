@@ -28,7 +28,7 @@
           <div class="contact-form-section" data-aos="fade-right">
             <div class="form-header">
               <h2>Envie sua Mensagem</h2>
-              <p>Preencha o formulário e retornaremos em até 24 horas.</p>
+              <p>Preencha o formulário e retornaremos o mais rápido possível.</p>
             </div>
             
             <form @submit.prevent="handleSubmit" class="contact-form">
@@ -55,7 +55,7 @@
               </div>
               
               <div class="form-group">
-                <label for="phone">Telefone (opcional)</label>
+                <label for="phone">Telefone</label>
                 <input 
                   type="tel" 
                   id="phone"
@@ -69,9 +69,9 @@
                 <select id="subject" v-model="form.subject" required>
                   <option value="">Selecione um assunto</option>
                   <option value="desenvolvimento">Desenvolvimento Web</option>
-                  <option value="design">Design UI/UX</option>
-                  <option value="marketing">Marketing Digital</option>
-                  <option value="consultoria">Consultoria</option>
+                  <option value="design">Tráfego Pago</option>
+                  <option value="marketing">Automação de Marketing</option>
+                  <option value="consultoria">Inteligência Artificial</option>
                   <option value="outros">Outros</option>
                 </select>
               </div>
@@ -139,7 +139,7 @@
                   </div>
                   <div class="contact-details">
                     <h4>Localização</h4>
-                    <p>Rio Grande do Sul, Brasil</p>
+                    <p>Lajeado, RS - Brasil</p>
                   </div>
                 </div>
               </div>
