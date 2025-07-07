@@ -236,7 +236,7 @@ const handleSubmit = async () => {
     console.log('Enviando dados:', webhookData)
     
     // Enviar para o webhook do CRM
-    const response = await fetch('https://services.leadconnectorhq.com/hooks/OENr4Dm8dvAwqM3OCwUk/webhook-trigger/f2f45ccd-4627-4134-94b1-02e29e155447', {
+    const response = await fetch('https://services.leadconnectorhq.com/hooks/OENr4Dm8dvAwqM3OCwUk/webhook-trigger/bfbcfd53-1ab9-420c-bfc2-8c3a41647c27', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

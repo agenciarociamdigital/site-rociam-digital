@@ -72,7 +72,8 @@
 
         <!-- Mensagem de sucesso -->
         <div class="success-message" v-if="submitSuccess">
-          Obrigado! Recebemos seu contato e responderemos em breve.
+          <h3>Mensagem Enviada!</h3>
+          <p>Sua mensagem foi enviada com sucesso. Retornaremos o contato em breve!</p>
         </div>
       </form>
     </div>
@@ -203,22 +204,33 @@ const closePopup = () => {
 // Enviar formulário
 const handleSubmit = async () => {
   if (!validateForm()) return
-  
   isSubmitting.value = true
-  
   try {
-    // Aqui será implementado o envio para o webhook quando disponível
-    // Por enquanto, simulamos o envio com um timeout
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    
-    // Sucesso
-    submitSuccess.value = true
-    
-    // Fechar popup após sucesso
-    setTimeout(() => {
-      closePopup()
-    }, 3000)
-    
+    // Montar payload para o webhook
+    const payload = {
+      fullName: formData.fullName.trim(),
+      whatsapp: formData.whatsapp.trim(),
+      email: formData.email.trim(),
+      website: formData.website.trim(),
+      source: 'Website Rociam Digital - Popup',
+      timestamp: new Date().toISOString()
+    }
+    // Enviar para o webhook do CRM
+    const response = await fetch('https://services.leadconnectorhq.com/hooks/OENr4Dm8dvAwqM3OCwUk/webhook-trigger/40a09edf-74f8-46ee-a530-b2e383b72f45', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    })
+    if (response.ok) {
+      submitSuccess.value = true
+      setTimeout(() => {
+        closePopup()
+      }, 3000)
+    } else {
+      throw new Error(`Erro HTTP: ${response.status} - ${response.statusText}`)
+    }
   } catch (error) {
     console.error('Erro ao enviar formulário:', error)
     alert('Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.')
