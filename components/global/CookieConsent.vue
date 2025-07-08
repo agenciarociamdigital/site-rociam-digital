@@ -1,0 +1,73 @@
+<template>
+  <transition name="fade">
+    <div v-if="show" class="cookie-consent">
+      <span>
+        Utilizamos cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <a href='/politica-de-privacidade' target='_blank'>Política de Privacidade</a>.
+      </span>
+      <button @click="acceptCookies" aria-label="Aceitar cookies">OK</button>
+    </div>
+  </transition>
+</template>
+
+<script setup>
+import { ref, onMounted } from 'vue'
+
+const show = ref(false)
+
+onMounted(() => {
+  if (!localStorage.getItem('cookieConsent')) {
+    show.value = true
+  }
+})
+
+function acceptCookies() {
+  localStorage.setItem('cookieConsent', 'true')
+  show.value = false
+}
+</script>
+
+<style scoped>
+.cookie-consent {
+  position: fixed;
+  left: 50%;
+  bottom: 2rem;
+  transform: translateX(-50%);
+  background: var(--cinza-solido);
+  color: var(--cor-branco);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: var(--f2);
+  font-family: var(--regular), Arial, sans-serif;
+  z-index: 2000;
+}
+.cookie-consent a {
+  color: var(--azul-digital);
+  text-decoration: underline;
+  font-family: var(--regular), Arial, sans-serif;
+}
+.cookie-consent button {
+  background: var(--azul-digital);
+  color: var(--cor-branco);
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 1.2rem;
+  font-size: var(--f2);
+  font-family: var(--bold), Arial, sans-serif;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.cookie-consent button:hover {
+  background: var(--cor-branco);
+  color: var(--azul-digital);
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+</style> 

@@ -26,11 +26,11 @@
       <div class="hero-content">
         <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
           Soluções Modernas para
-          <span class="title-highlight">Empresas Que Estão A Frente</span>
+          <span class="title-highlight">Empresas Que Estão à Frente</span>
         </h1>
         
         <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
-          Web, Leads, CRM e Automação com IA: Tudo para Empresas que Lideram o Mercado.
+          Tráfego Pago, Desenvolvimento Web, Leads, CRM e Automação com IA: Tudo para Empresas que Lideram o Mercado.
         </p>
 
         <!-- CTA Button -->

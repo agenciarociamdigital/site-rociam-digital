@@ -10,7 +10,9 @@ export default defineNuxtRouteMiddleware((to) => {
     '/solucoes/desenvolvimento-web',
     '/solucoes/crm',
     '/solucoes/analytics',
-    '/erro'
+    '/erro',
+    '/politica-de-privacidade',
+    '/termos-de-uso'
   ]
   
   // Verificar se a rota atual está nas rotas válidas ou se é uma rota dinâmica válida

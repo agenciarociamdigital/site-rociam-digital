@@ -94,14 +94,12 @@
           <p>&copy; {{ currentYear }} Rociam Digital. Todos os direitos reservados.</p>
         </div>
         <div class="footer-bottom-links">
-          <a href="/politica-privacidade">Política de Privacidade</a>
+          <a href="/politica-de-privacidade">Política de Privacidade</a>
           <span class="separator">|</span>
-          <a href="/termos-uso">Termos de Uso</a>
-          <span class="separator">|</span>
-          <a href="/cookies">Cookies</a>
+          <a href="/termos-de-uso">Termos de Uso</a>
         </div>
         <div class="developed-by">
-          <p>Desenvolvido por <strong>Rociam Digital Tech</strong></p>
+          <p>Desenvolvido por <span class="marca">Rociam Digital Tech</span></p>
         </div>
       </div>
     </div>
@@ -369,9 +367,10 @@ footer::before {
 
 .footer-content {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
   gap: 3rem;
   margin-bottom: 3rem;
+  align-items: start;
 }
 
 .footer-section h2,
@@ -382,16 +381,27 @@ footer::before {
   color: var(--cor-branco);
 }
 
+.footer-section.about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100%;
+}
+
 .footer-section.about .logo {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.2rem;
+  display: block;
+  align-items: flex-start;
+  height: auto;
 }
 
 .footer-logo {
-  height: 120px;
+  height: 150px;
   width: auto;
-  max-width: 400px;
+  max-width: 320px;
   object-fit: contain;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 }
@@ -403,11 +413,12 @@ footer::before {
 }
 
 .description {
-  font-family: var(--regular);
-  font-size: var(--f2);
-  line-height: 1.6;
-  color: var(--cor-gelo);
   margin-bottom: 2rem;
+  margin-top: 0;
+  text-align: left;
+  font-size: var(--f2);
+  color: var(--cor-gelo);
+  font-family: var(--regular);
 }
 
 .social-links {
@@ -547,9 +558,9 @@ footer::before {
   opacity: 0.5;
 }
 
-.developed-by strong {
+.developed-by .marca {
   color: var(--cor-laranja);
-  font-family: var(--bold);
+  font-family: var(--regular);
 }
 
 /* Responsivo */
