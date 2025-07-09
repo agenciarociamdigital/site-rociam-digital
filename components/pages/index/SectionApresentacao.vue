@@ -480,15 +480,15 @@ onMounted(() => {
   padding: 0 0 6rem 0;
   background: #0d0d0d;
   overflow: hidden;
+  margin-top: -2rem;
 }
-
 /* Gradient Transition */
 .section-gradient {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 200px;
+  height: 120px;
   background: linear-gradient(180deg, #000000 0%, transparent 100%);
   z-index: 1;
 }
@@ -664,7 +664,7 @@ onMounted(() => {
 /* Responsivo */
 @media screen and (max-width: 1140px) {
   .hero {
-    padding: 7rem 0 3rem;
+    padding: 6rem 0 3rem;
   }
   
   .container {
@@ -672,39 +672,33 @@ onMounted(() => {
   }
   
   .hero-title {
-    font-size: var(--f6);
-    margin-bottom: 2.5rem;
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
   }
   
   .hero-description {
-    font-size: var(--f2);
+    font-size: 1.2rem;
     margin-bottom: 2.5rem;
+    line-height: 1.5;
   }
   
   .announcement-badge {
     margin-bottom: 2rem;
-    padding: 0.3rem 0.7rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .badge-text {
+    font-size: 0.9rem;
+  }
+  
+  .cta-primary {
+    padding: 1.2rem 2.4rem;
+    font-size: 1rem;
   }
   
   .crm-showcase {
-    padding: 0 0 3rem 0;
-  }
-  
-  .floating-card {
-    padding: 0.6rem 1rem;
-    font-size: 0.85rem;
-  }
-  
-  .card-1 {
-    left: 5%;
-  }
-  
-  .card-2 {
-    right: 5%;
-  }
-  
-  .card-3 {
-    left: 65%;
+    padding: 0 0 4rem 0;
   }
   
   .crm-dashboard {
@@ -712,307 +706,352 @@ onMounted(() => {
   }
   
   .crm-screen {
-    height: 350px;
+    height: 380px;
   }
   
-  .placeholder-stats {
-    gap: 1.5rem;
+  .dashboard-title {
+    font-size: 1rem;
   }
   
-  .stat-number {
-    font-size: 1.75rem;
+  .crm-description p {
+    font-size: 1.15rem;
   }
 }
 
 @media screen and (max-width: 768px) {
   .hero {
     min-height: 100vh;
-    padding: 6rem 0 3.5rem;
+    padding: 5rem 0 3rem;
   }
   
   .container {
-    padding: 0 1.2rem;
+    padding: 0 1.5rem;
   }
   
   .hero-title {
-    font-size: var(--f5);
-    margin-bottom: 2rem;
+    font-size: 2.8rem;
+    margin-bottom: 1.8rem;
     line-height: 1.15;
   }
   
   .hero-description {
-    font-size: var(--f2);
+    font-size: 1.1rem;
     margin-bottom: 2.5rem;
-    line-height: 1.5;
+    line-height: 1.6;
+    max-width: 100%;
   }
   
   .announcement-badge {
-    margin-bottom: 1.5rem;
-    padding: 0.3rem 0.6rem;
+    margin-bottom: 1.8rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
   }
   
   .badge-text {
-    font-size: var(--f0);
+    font-size: 0.85rem;
   }
   
   .cta-primary {
-    padding: 1.2rem 2.2rem;
-    font-size: var(--f3);
+    padding: 1.4rem 2.5rem;
+    font-size: 1.05rem;
+    border-radius: 16px;
   }
   
   .hero-background {
-    opacity: 0.2; /* Reduz opacidade em mobile para melhor legibilidade */
-    animation-duration: 30s; /* Movimento mais lento em mobile */
+    opacity: 0.25;
+    animation-duration: 25s;
   }
   
   .hero-overlay {
-    background: rgba(0, 0, 0, 0.6); /* Escurece mais o overlay em mobile */
+    background: rgba(0, 0, 0, 0.55);
   }
   
   .glass-blocks-overlay {
-    opacity: 0.4; /* Reduz intensidade do efeito de vidro em tablet */
-    background-size: 120px 120px, 90px 90px, 110px 110px; /* Blocos menores */
+    opacity: 0.4;
+    background-size: 120px 120px, 90px 90px, 110px 110px;
   }
   
   .particles {
-    opacity: 0.5; /* Reduz intensidade das partículas em tablet */
+    opacity: 0.6;
   }
   
   .crm-showcase {
-    min-height: auto;
-    padding: 0 0 3rem 0;
+    padding: 2rem 0 4rem 0;
   }
   
   .crm-dashboard {
-    padding: 1rem;
+    padding: 1.2rem;
     border-radius: 20px;
   }
   
   .dashboard-header {
-    padding: 0.875rem 1.25rem;
-    margin: -1rem -1rem 1rem -1rem;
+    padding: 1rem 1.5rem;
+    margin: -1.2rem -1.2rem 1.2rem -1.2rem;
   }
   
   .dashboard-title {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
   }
   
   .crm-screen {
-    height: 300px;
+    height: 320px;
   }
   
-  .placeholder-content h3 {
-    font-size: 1.25rem;
-  }
-  
-  .placeholder-stats {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .stat-number {
-    font-size: 1.5rem;
+  .crm-description {
+    margin-top: 2.5rem;
   }
   
   .crm-description p {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
   }
 }
 
 @media screen and (max-width: 480px) {
   .hero {
-    padding: 5.5rem 0 2.5rem;
+    padding: 4rem 0 1.5rem;
+    min-height: 100vh;
   }
   
   .container {
-    padding: 0 1rem;
+    padding: 0 1.25rem;
   }
   
   .hero-title {
-    font-size: var(--f4);
+    font-size: 2.2rem;
     margin-bottom: 1.5rem;
-    line-height: 1.2;
+    line-height: 1.25;
+    font-weight: 800;
   }
   
   .hero-description {
-    font-size: var(--f1);
-    margin-bottom: 2rem;
-    line-height: 1.4;
+    font-size: 1rem;
+    margin-bottom: 2.2rem;
+    line-height: 1.5;
+    max-width: 100%;
+    opacity: 0.95;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   
   .announcement-badge {
-    margin-bottom: 1.2rem;
-    padding: 0.25rem 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
   }
   
   .badge-text {
-    font-size: var(--f0);
+    font-size: 0.7rem;
+    font-weight: 600;
   }
   
   .badge-icon {
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
   }
   
   .cta-primary {
-    padding: 1rem 1.8rem;
-    font-size: var(--f2);
+    padding: 1.3rem 2.2rem;
+    font-size: 1rem;
+    border-radius: 18px;
+    font-weight: 700;
   }
   
   .cta-icon {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
   }
   
   .hero-background {
-    opacity: 0.15; /* Ainda mais sutil em telas pequenas */
-    animation-duration: 40s; /* Ainda mais lento em mobile */
+    opacity: 0.2;
+    animation-duration: 35s;
   }
   
   .hero-overlay {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.65);
   }
   
   .glass-blocks-overlay {
-    opacity: 0.3; /* Muito sutil em mobile */
-    background-size: 80px 80px, 60px 60px, 70px 70px; /* Blocos ainda menores */
-    animation-duration: 25s; /* Movimento mais lento */
+    opacity: 0.35;
+    background-size: 100px 100px, 75px 75px, 85px 85px;
+    animation-duration: 22s;
   }
   
   .particles {
-    display: none; /* Remove partículas em telas muito pequenas */
+    display: none;
+  }
+  
+  .crm-showcase {
+    padding: 1rem 0 3rem 0;
+    margin-top: -1.5rem;
+  }
+  
+  .crm-dashboard {
+    padding: 1rem;
+    border-radius: 18px;
+  }
+  
+  .dashboard-header {
+    padding: 0.9rem 1.2rem;
+    margin: -1rem -1rem 1rem -1rem;
+    border-radius: 18px 18px 0 0;
+    position: relative;
+    z-index: 3;
+  }
+  
+  .dashboard-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 3;
+    position: relative;
+  }
+  
+  .dashboard-title span {
+    font-size: 0.75rem;
+    display: block;
+    text-align: center;
+  }
+  
+  .live-indicator {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+  }
+  
+  .crm-screen {
+    height: 280px;
+    border-radius: 12px;
+  }
+  
+  .crm-description {
+    margin-top: 2rem;
+  }
+  
+  .crm-description p {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 500;
+    max-width: 100%;
   }
 }
 
 /* CRM Section Responsive */
 @media screen and (max-width: 1140px) {
   .crm-showcase {
-    padding: 0 0 3rem 0;
+    padding: 0 0 4rem 0;
   }
   
   .crm-dashboard {
-    padding: 1.25rem;
+    padding: 1.4rem;
   }
   
   .crm-screen {
-    height: 350px;
-  }
-  
-  .placeholder-stats {
-    gap: 1.5rem;
-  }
-  
-  .stat-number {
-    font-size: 1.75rem;
+    height: 380px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .crm-showcase {
-    min-height: auto;
-    padding: 2rem 0 3rem 0;
-  }
-  
-  .floating-elements {
-    position: static;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
-  }
-  
-  .floating-card {
-    position: static;
-    animation: none;
-    padding: 0.5rem 0.875rem;
-    font-size: 0.8rem;
+    padding: 2rem 0 4rem 0;
   }
   
   .crm-dashboard {
-    padding: 1rem;
+    padding: 1.2rem;
     border-radius: 20px;
   }
   
   .dashboard-header {
-    padding: 0.875rem 1.25rem;
-    margin: -1rem -1rem 1rem -1rem;
+    padding: 1rem 1.5rem;
+    margin: -1.2rem -1.2rem 1.2rem -1.2rem;
   }
   
   .dashboard-title {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
   }
   
   .crm-screen {
-    height: 300px;
-  }
-  
-  .placeholder-content h3 {
-    font-size: 1.25rem;
-  }
-  
-  .placeholder-stats {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .stat-number {
-    font-size: 1.5rem;
+    height: 320px;
   }
   
   .crm-description p {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
   }
 }
 
 @media screen and (max-width: 480px) {
   .crm-showcase {
-    padding: 0 0 2rem 0;
+    padding: 1rem 0 3rem 0;
+    margin-top: -1.5rem;
   }
   
   .crm-dashboard {
-    padding: 0.875rem;
-    border-radius: 16px;
+    padding: 1rem;
+    border-radius: 18px;
   }
   
   .dashboard-header {
-    padding: 0.75rem 1rem;
-    margin: -0.875rem -0.875rem 0.875rem -0.875rem;
+    padding: 0.9rem 1.2rem;
+    margin: -1rem -1rem 1rem -1rem;
+    border-radius: 18px 18px 0 0;
+    position: relative;
+    z-index: 3;
+  }
+  
+  .dashboard-controls {
+    left: 1.2rem;
+    z-index: 4;
+    position: relative;
+  }
+  
+  .control-dot {
+    width: 10px;
+    height: 10px;
   }
   
   .dashboard-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 3;
+    position: relative;
+  }
+  
+  .dashboard-title span {
     font-size: 0.75rem;
+    display: block;
+    text-align: center;
   }
   
   .live-indicator {
-    padding: 0.2rem 0.6rem;
+    padding: 0.3rem 0.7rem;
     font-size: 0.7rem;
+    font-weight: 700;
+    z-index: 3;
+    position: relative;
+  }
+  
+  .live-dot {
+    width: 6px;
+    height: 6px;
   }
   
   .crm-screen {
-    height: 250px;
-    border-radius: 10px;
+    height: 280px;
+    border-radius: 12px;
   }
   
-  .placeholder-content h3 {
-    font-size: 1.1rem;
-  }
-  
-  .placeholder-content p {
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .stat-number {
-    font-size: 1.25rem;
-  }
-  
-  .stat-label {
-    font-size: 0.75rem;
+  .crm-description {
+    margin-top: 2rem;
   }
   
   .crm-description p {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 500;
+    max-width: 100%;
   }
 }
 </style>
