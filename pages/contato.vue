@@ -581,7 +581,89 @@ onMounted(() => {
 
 @media screen and (max-width: 768px) {
   .header-spacer {
-    height: 90px;
+    height: 85px;
+  }
+  
+  .contact-hero {
+    padding: 3rem 0;
+  }
+  
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  .page-title {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .page-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 100%;
+  }
+  
+  .contact-content {
+    padding: 3rem 0;
+  }
+  
+  .contact-grid {
+    gap: 2.5rem;
+  }
+  
+  .contact-form-section,
+  .info-card,
+  .map-container {
+    padding: 2rem;
+    border-radius: 20px;
+  }
+  
+  .form-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .form-header p {
+    font-size: 1rem;
+  }
+  
+  .form-group label {
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 12px;
+  }
+  
+  .submit-button {
+    padding: 1.2rem 2rem;
+    font-size: 1rem;
+    border-radius: 14px;
+  }
+  
+  .map-wrapper {
+    height: 280px;
+    border-radius: 16px;
+  }
+  
+  .contact-item h4 {
+    font-size: 1.1rem;
+  }
+  
+  .contact-item p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header-spacer {
+    height: 75px;
   }
   
   .contact-hero {
@@ -589,17 +671,21 @@ onMounted(() => {
   }
   
   .container {
-    padding: 0 1.2rem;
+    padding: 0 1.25rem;
   }
   
   .page-title {
-    font-size: var(--f4);
-    line-height: 1.15;
+    font-size: 2.2rem;
+    line-height: 1.25;
+    margin-bottom: 1.2rem;
+    font-weight: 800;
   }
   
   .page-description {
-    font-size: var(--f2);
-    line-height: 1.4;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 100%;
+    opacity: 0.95;
   }
   
   .contact-content {
@@ -614,64 +700,86 @@ onMounted(() => {
   .info-card,
   .map-container {
     padding: 1.5rem;
+    border-radius: 18px;
   }
   
-  .map-wrapper {
-    height: 220px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .header-spacer {
-    height: 70px;
+  .form-header h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
   }
   
-  .contact-hero {
-    padding: 2rem 0;
+  .form-header p {
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
   
-  .container {
-    padding: 0 1rem;
+  .form-group {
+    margin-bottom: 1.5rem;
   }
   
-  .page-title {
-    font-size: var(--f3);
-    line-height: 1.2;
+  .form-group label {
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
   }
   
-  .page-description {
-    font-size: var(--f1);
-    line-height: 1.3;
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 1rem;
+    font-size: 0.95rem;
+    border-radius: 12px;
+    line-height: 1.4;
   }
   
-  .contact-content {
-    padding: 2rem 0;
+  .form-group textarea {
+    min-height: 120px;
   }
   
-  .contact-form-section,
-  .info-card,
-  .map-container {
-    padding: 1.2rem;
+  .submit-button {
+    padding: 1.3rem 2.2rem;
+    font-size: 1rem;
+    border-radius: 16px;
+    font-weight: 700;
+    width: 100%;
+  }
+  
+  .button-icon {
+    width: 20px;
+    height: 20px;
   }
   
   .contact-item {
     flex-direction: column;
     text-align: center;
-    gap: 0.5rem;
+    gap: 0.8rem;
+    padding: 1.2rem;
   }
   
   .contact-icon {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
   }
   
   .contact-icon svg {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .contact-item h4 {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  
+  .contact-item p {
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
   
   .map-wrapper {
-    height: 180px;
+    height: 250px;
+    border-radius: 14px;
   }
 }
 
@@ -776,13 +884,49 @@ onMounted(() => {
 /* Responsividade do Popup */
 @media screen and (max-width: 768px) {
   .popup-content {
+    padding: 2.5rem;
+    margin: 1.5rem;
+    border-radius: 20px;
+  }
+  
+  .popup-icon {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .popup-icon svg {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .popup-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .popup-content p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .popup-button {
+    padding: 1.2rem 2rem;
+    font-size: 1rem;
+    border-radius: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .popup-content {
     padding: 2rem;
     margin: 1rem;
+    border-radius: 18px;
   }
   
   .popup-icon {
     width: 60px;
     height: 60px;
+    margin-bottom: 1.2rem;
   }
   
   .popup-icon svg {
@@ -791,11 +935,23 @@ onMounted(() => {
   }
   
   .popup-content h3 {
-    font-size: var(--f2);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
   }
   
   .popup-content p {
-    font-size: var(--f1);
+    font-size: 0.95rem;
+    margin-bottom: 1.8rem;
+    line-height: 1.6;
+  }
+  
+  .popup-button {
+    padding: 1.3rem 2.2rem;
+    font-size: 1rem;
+    border-radius: 16px;
+    font-weight: 700;
+    width: 100%;
   }
 }
 </style>

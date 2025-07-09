@@ -897,32 +897,43 @@ onMounted(() => {
   .tech-item {
     padding: 0.8rem;
   }
+  
+  .solutions-content {
+    padding: 4rem 0 0 0;
+  }
+  
+  .solution-item {
+    margin-bottom: 5rem;
+  }
 }
 
 @media (max-width: 768px) {
   .solutions-hero {
     padding: 5rem 0 2rem 0;
+    min-height: auto;
   }
   
   .container {
-    padding: 0 1.2rem;
+    padding: 0 1.5rem;
   }
   
   .hero-title {
-    font-size: 2.4rem;
-    line-height: 1.15;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
   }
   
   .hero-description {
     font-size: 1.1rem;
-    line-height: 1.4;
-    margin-bottom: 2rem;
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
   }
   
   .hero-badge {
     margin-bottom: 1.5rem;
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+    border-radius: 30px;
   }
   
   .hero-tech-stack {
@@ -931,49 +942,80 @@ onMounted(() => {
   }
   
   .tech-item {
-    padding: 0.7rem;
-    font-size: 0.9rem;
+    padding: 0.8rem 0.6rem;
+    font-size: 0.85rem;
+    border-radius: 10px;
+    min-width: 70px;
   }
   
   .tech-icon {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .solutions-content {
+    padding: 3rem 0 0 0;
   }
   
   .solution-item {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin-bottom: 3rem;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    padding: 0 1rem;
+  }
+  
+  .solution-content {
+    text-align: center;
   }
   
   .solution-content h3 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.3;
   }
   
   .solution-content p {
     font-size: 1rem;
-    line-height: 1.4;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    text-align: left;
   }
   
   .video-container {
-    height: 180px;
+    height: 200px;
   }
   
-  .cta-final {
-    margin-top: 3rem;
-    padding: 2rem 0;
+  .cta-button {
+    padding: 0.9rem 1.8rem;
+    font-size: 0.95rem;
+    border-radius: 30px;
+  }
+  
+  .solutions-cta {
+    padding: 2.5rem 0;
   }
   
   .cta-inner {
-    padding: 2rem 1.5rem;
+    padding: 2.5rem 1.5rem;
+    border-radius: 12px;
   }
   
-  .cta-title {
+  .cta-inner h2 {
     font-size: 1.8rem;
+    margin-bottom: 1rem;
+    line-height: 1.3;
   }
   
-  .cta-description {
+  .cta-inner p {
     font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+  
+  .main-cta-button {
+    padding: 0.9rem 1.8rem;
+    font-size: 0.95rem;
+    border-radius: 30px;
   }
 }
 
@@ -988,72 +1030,109 @@ onMounted(() => {
   
   .hero-title {
     font-size: 2rem;
-    line-height: 1.2;
+    line-height: 1.25;
+    margin-bottom: 1rem;
   }
   
   .hero-description {
-    font-size: 1rem;
-    line-height: 1.3;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
   }
   
   .hero-badge {
-    padding: 0.4rem 0.8rem;
+    padding: 0.5rem 1rem;
     font-size: 0.8rem;
+    margin-bottom: 1.2rem;
   }
   
   .hero-tech-stack {
-    gap: 0.8rem;
+    gap: 0.6rem;
     flex-wrap: wrap;
     justify-content: center;
   }
   
   .tech-item {
-    padding: 0.6rem;
-    font-size: 0.8rem;
+    padding: 0.6rem 0.5rem;
+    font-size: 0.75rem;
+    min-width: 60px;
+    border-radius: 8px;
   }
   
   .tech-icon {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
+  }
+  
+  .solutions-content {
+    padding: 2.5rem 0 0 0;
   }
   
   .solution-item {
-    gap: 1.2rem;
-    margin-bottom: 2.5rem;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    padding: 0 0.5rem;
   }
   
   .solution-content h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
   }
   
   .solution-content p {
     font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
   }
   
   .video-container {
-    height: 160px;
+    height: 180px;
   }
   
-  .cta-final {
-    margin-top: 2.5rem;
-    padding: 1.5rem 0;
+  .video-screen-share {
+    border-radius: 8px;
   }
   
-  .cta-inner {
-    padding: 1.5rem 1rem;
+  .screen-header {
+    padding: 0.6rem 0.8rem;
   }
   
-  .cta-title {
-    font-size: 1.5rem;
-  }
-  
-  .cta-description {
-    font-size: 0.9rem;
+  .screen-title {
+    font-size: 0.75rem;
   }
   
   .cta-button {
     padding: 0.8rem 1.5rem;
     font-size: 0.9rem;
+    border-radius: 25px;
+  }
+  
+  .solutions-cta {
+    padding: 2rem 0;
+  }
+  
+  .cta-inner {
+    padding: 2rem 1rem;
+    border-radius: 10px;
+  }
+  
+  .cta-inner h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+  }
+  
+  .cta-inner p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .main-cta-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+    border-radius: 25px;
   }
 }
 

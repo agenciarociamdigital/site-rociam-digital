@@ -3,7 +3,6 @@
     <Nav />
     <main>
       <SectionApresentacao />
-      <InteractiveSection />
     </main>
     <Footer />
     <BotaoVoltarTopo />

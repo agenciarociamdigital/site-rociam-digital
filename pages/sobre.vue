@@ -526,39 +526,81 @@ useHead({
 
 @media screen and (max-width: 768px) {
   .header-spacer {
-    height: 90px;
+    height: 85px;
   }
   
   .about-hero {
-    padding: 2.5rem 0;
+    padding: 3rem 0;
   }
   
   .container {
-    padding: 0 1.2rem;
+    padding: 0 1.5rem;
   }
   
   .page-title {
-    font-size: var(--f5);
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
   }
   
   .page-description {
-    font-size: var(--f2);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 100%;
   }
   
   .section-title {
-    font-size: var(--f4);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
   }
   
   .lead-text {
-    font-size: var(--f2);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .body-text {
+    font-size: 1rem;
+    line-height: 1.6;
   }
   
   .stats-card {
     padding: 2rem;
+    border-radius: 20px;
+  }
+  
+  .stat-number {
+    font-size: 2.2rem;
+  }
+  
+  .stat-label {
+    font-size: 1rem;
   }
   
   .philosophy-card {
     padding: 2rem 1.5rem;
+    border-radius: 20px;
+  }
+  
+  .card-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .card-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .card-title {
+    font-size: 1.3rem;
+  }
+  
+  .card-description {
+    font-size: 1rem;
+    line-height: 1.6;
   }
   
   .differential-item {
@@ -566,77 +608,120 @@ useHead({
   }
   
   .differential-number {
-    font-size: var(--f3);
+    font-size: 1.5rem;
+  }
+  
+  .differential-title {
+    font-size: 1.2rem;
+  }
+  
+  .differential-text {
+    font-size: 1rem;
+    line-height: 1.6;
   }
   
   .final-cta {
     padding: 3rem 1.5rem;
+    border-radius: 24px;
   }
   
   .cta-title {
-    font-size: var(--f3);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cta-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-button {
+    padding: 1.2rem 2rem;
+    font-size: 1rem;
+    border-radius: 14px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .header-spacer {
-    height: 70px;
+    height: 75px;
   }
   
   .about-hero {
-    padding: 2rem 0;
+    padding: 2.5rem 0;
   }
   
   .container {
-    padding: 0 1rem;
+    padding: 0 1.25rem;
   }
   
   .page-title {
-    font-size: var(--f4);
+    font-size: 2.2rem;
+    line-height: 1.25;
+    margin-bottom: 1.2rem;
+    font-weight: 800;
   }
   
   .page-description {
-    font-size: var(--f1);
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 100%;
+    opacity: 0.95;
   }
   
   .about-content {
-    padding: 3rem 0;
+    padding: 2.5rem 0;
   }
   
   .main-content,
   .philosophy-section,
   .differentials-section {
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
   }
   
   .section-title {
-    font-size: var(--f3);
-    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+  }
+  
+  .section-title.centered {
+    text-align: center;
   }
   
   .lead-text {
-    font-size: var(--f1);
-    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
   }
   
   .body-text {
-    font-size: var(--f0);
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
   
   .stats-card {
     padding: 1.5rem;
+    border-radius: 18px;
   }
   
   .stat-number {
-    font-size: var(--f4);
+    font-size: 1.8rem;
+    font-weight: 800;
   }
   
   .stat-label {
-    font-size: var(--f0);
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  .philosophy-grid {
+    gap: 1.5rem;
   }
   
   .philosophy-card {
     padding: 1.5rem;
+    border-radius: 18px;
   }
   
   .card-icon {
@@ -651,50 +736,73 @@ useHead({
   }
   
   .card-title {
-    font-size: var(--f2);
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
   }
   
   .card-description {
-    font-size: var(--f0);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  .differentials-grid {
+    gap: 2rem;
   }
   
   .differential-item {
     padding-left: 2.5rem;
+    position: relative;
   }
   
   .differential-number {
-    font-size: var(--f2);
+    font-size: 1.2rem;
+    font-weight: 800;
+    position: absolute;
+    left: 0;
+    top: 0;
   }
   
   .differential-title {
-    font-size: var(--f1);
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+    font-weight: 700;
   }
   
   .differential-text {
-    font-size: var(--f0);
+    font-size: 0.9rem;
+    line-height: 1.6;
   }
   
   .final-cta {
-    padding: 2.5rem 1rem;
+    padding: 2.5rem 1.5rem;
+    border-radius: 20px;
+    text-align: center;
   }
   
   .cta-title {
-    font-size: var(--f2);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
   }
   
   .cta-description {
-    font-size: var(--f1);
+    font-size: 1rem;
     margin-bottom: 2rem;
+    line-height: 1.6;
   }
   
   .cta-button {
-    padding: 0.8rem 1.5rem;
-    font-size: var(--f1);
+    padding: 1.3rem 2.2rem;
+    font-size: 1rem;
+    border-radius: 16px;
+    font-weight: 700;
+    width: 100%;
   }
   
   .cta-button svg {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
   }
 }
 </style>

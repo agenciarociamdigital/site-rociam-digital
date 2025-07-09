@@ -314,27 +314,30 @@ onMounted(() => {
 @media (max-width: 768px) {
   .solution-hero {
     padding: 5rem 0 2rem 0;
+    min-height: auto;
   }
   
   .container {
-    padding: 0 1.2rem;
+    padding: 0 1.5rem;
   }
   
   .hero-title {
-    font-size: 2.4rem;
-    line-height: 1.15;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
   }
   
   .hero-description {
     font-size: 1.1rem;
-    line-height: 1.4;
-    margin-bottom: 2rem;
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
   }
   
   .hero-badge {
     margin-bottom: 1.5rem;
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+    border-radius: 30px;
   }
   
   .hero-cta {
@@ -342,8 +345,9 @@ onMounted(() => {
   }
   
   .cta-primary {
-    padding: 0.9rem 1.6rem;
-    font-size: 1rem;
+    padding: 0.9rem 1.8rem;
+    font-size: 0.95rem;
+    border-radius: 30px;
   }
 }
 
@@ -358,22 +362,26 @@ onMounted(() => {
   
   .hero-title {
     font-size: 2rem;
-    line-height: 1.2;
+    line-height: 1.25;
+    margin-bottom: 1rem;
   }
   
   .hero-description {
-    font-size: 1rem;
-    line-height: 1.3;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
   }
   
   .hero-badge {
-    padding: 0.4rem 0.8rem;
+    padding: 0.5rem 1rem;
     font-size: 0.8rem;
+    margin-bottom: 1.2rem;
   }
   
   .cta-primary {
-    padding: 0.8rem 1.4rem;
+    padding: 0.8rem 1.5rem;
     font-size: 0.9rem;
+    border-radius: 25px;
   }
 }
 

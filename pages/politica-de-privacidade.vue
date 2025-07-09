@@ -35,6 +35,7 @@ import BotaoVoltarTopo from '@/components/global/BotaoVoltarTopo.vue'
   border-radius: 18px;
   box-shadow: 0 4px 32px rgba(0,0,0,0.10);
 }
+
 h1 {
   color: var(--azul-digital);
   font-size: var(--f5);
@@ -42,10 +43,54 @@ h1 {
   font-family: var(--bold), Arial, sans-serif;
   text-align: left;
 }
+
 p {
   font-size: var(--f2);
   line-height: 1.7;
   margin-bottom: 1.2rem;
   color: var(--cor-branco);
+}
+
+/* Responsivo Tablet */
+@media screen and (max-width: 768px) {
+  .pagina-simples {
+    margin: 2rem 1.5rem;
+    padding: 3rem 2rem;
+    border-radius: 20px;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Responsivo Mobile */
+@media screen and (max-width: 480px) {
+  .pagina-simples {
+    margin: 1.5rem 1.25rem;
+    padding: 2.5rem 1.5rem;
+    border-radius: 18px;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.25;
+    font-weight: 800;
+  }
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+  }
 }
 </style> 

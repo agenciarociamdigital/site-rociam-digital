@@ -646,27 +646,30 @@ onMounted(() => {
 @media (max-width: 768px) {
   .solution-hero {
     padding: 5rem 0 2rem 0;
+    min-height: auto;
   }
   
   .container {
-    padding: 0 1.2rem;
+    padding: 0 1.5rem;
   }
   
   .hero-title {
-    font-size: 2.4rem;
-    line-height: 1.15;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
   }
   
   .hero-description {
     font-size: 1.1rem;
-    line-height: 1.4;
-    margin-bottom: 2rem;
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
   }
   
   .hero-badge {
     margin-bottom: 1.5rem;
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+    border-radius: 30px;
   }
   
   .hero-cta {
@@ -674,8 +677,43 @@ onMounted(() => {
   }
   
   .cta-primary {
-    padding: 0.9rem 1.6rem;
-    font-size: 1rem;
+    padding: 0.9rem 1.8rem;
+    font-size: 0.95rem;
+    border-radius: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .solution-hero {
+    padding: 4.5rem 0 1.5rem 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.25;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-badge {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .cta-primary {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+    border-radius: 25px;
   }
 }
 
@@ -725,21 +763,27 @@ onMounted(() => {
   }
   
   .vsl-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
     line-height: 1.3;
+    margin-bottom: 1rem;
   }
   
   .vsl-subtitle {
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.6;
   }
   
   .video-wrapper {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
   }
   
   .video-container {
-    padding: 0.75rem;
+    padding: 0.8rem;
+    border-radius: 16px;
+  }
+  
+  .video-player {
+    border-radius: 12px;
   }
   
   .video-info {
@@ -747,37 +791,49 @@ onMounted(() => {
     justify-content: center;
     margin-top: 1rem;
     flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .video-duration, .video-quality {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
   }
   
   .vsl-benefits {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
   }
   
   .benefits-title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 1.5rem;
+    text-align: center;
   }
   
   .benefits-grid {
     gap: 1rem;
+    grid-template-columns: 1fr;
   }
   
   .benefit-item {
-    padding: 0.875rem 1.25rem;
+    padding: 1rem 1.5rem;
     text-align: left;
+    border-radius: 12px;
   }
   
   .benefit-item span {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
   
   .cta-vsl-primary {
-    padding: 1rem 1.75rem;
+    padding: 1rem 2rem;
     font-size: 0.95rem;
+    border-radius: 30px;
   }
   
   .cta-guarantee {
     font-size: 0.85rem;
+    margin-top: 1rem;
   }
 }
 
@@ -787,26 +843,32 @@ onMounted(() => {
   }
   
   .vsl-title {
-    font-size: 1.75rem;
-    line-height: 1.3;
+    font-size: 1.8rem;
+    line-height: 1.4;
+    margin-bottom: 0.8rem;
   }
   
   .vsl-subtitle {
-    font-size: 0.95rem;
-    line-height: 1.4;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  .video-wrapper {
+    margin-bottom: 2rem;
   }
   
   .video-container {
-    padding: 0.5rem;
-    border-radius: 16px;
+    padding: 0.6rem;
+    border-radius: 12px;
   }
   
   .video-player {
-    border-radius: 10px;
+    border-radius: 8px;
   }
   
   .video-info {
-    gap: 0.75rem;
+    gap: 0.8rem;
+    margin-top: 0.8rem;
   }
   
   .video-duration, .video-quality {
@@ -815,12 +877,14 @@ onMounted(() => {
   }
   
   .benefits-title {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
   }
   
   .benefit-item {
-    padding: 0.75rem 1rem;
-    gap: 0.75rem;
+    padding: 0.8rem 1rem;
+    gap: 0.8rem;
+    border-radius: 10px;
   }
   
   .benefit-icon {
@@ -830,18 +894,21 @@ onMounted(() => {
   
   .benefit-item span {
     font-size: 0.85rem;
+    line-height: 1.5;
   }
   
   .cta-vsl-primary {
     padding: 0.9rem 1.5rem;
     font-size: 0.9rem;
     gap: 0.5rem;
+    border-radius: 25px;
   }
   
   .cta-guarantee {
     font-size: 0.8rem;
     flex-direction: column;
-    gap: 0.25rem;
+    gap: 0.3rem;
+    margin-top: 0.8rem;
   }
   
   .shield-icon {

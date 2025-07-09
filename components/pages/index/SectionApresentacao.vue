@@ -729,9 +729,10 @@ onMounted(() => {
   }
   
   .hero-title {
-    font-size: 2.8rem;
-    margin-bottom: 1.8rem;
-    line-height: 1.15;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    font-weight: 800;
   }
   
   .hero-description {
@@ -743,18 +744,21 @@ onMounted(() => {
   
   .announcement-badge {
     margin-bottom: 1.8rem;
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+    border-radius: 30px;
   }
   
   .badge-text {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    line-height: 1.3;
   }
   
   .cta-primary {
-    padding: 1.4rem 2.5rem;
-    font-size: 1.05rem;
-    border-radius: 16px;
+    padding: 1.2rem 2.2rem;
+    font-size: 1rem;
+    border-radius: 30px;
+    font-weight: 700;
   }
   
   .hero-background {
@@ -776,7 +780,7 @@ onMounted(() => {
   }
   
   .crm-showcase {
-    padding: 2rem 0 4rem 0;
+    padding: 2.5rem 0 4rem 0;
   }
   
   .crm-dashboard {
@@ -790,11 +794,12 @@ onMounted(() => {
   }
   
   .dashboard-title {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
   }
   
   .crm-screen {
-    height: 320px;
+    height: 300px;
   }
   
   .crm-description {
@@ -803,49 +808,45 @@ onMounted(() => {
   
   .crm-description p {
     font-size: 1.1rem;
-    line-height: 1.5;
+    line-height: 1.6;
   }
 }
 
 @media screen and (max-width: 480px) {
   .hero {
-    padding: 4rem 0 1.5rem;
+    padding: 4.5rem 0 2rem;
     min-height: 100vh;
   }
   
   .container {
-    padding: 0 1.25rem;
+    padding: 0 1rem;
   }
   
   .hero-title {
-    font-size: 2.2rem;
-    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
     line-height: 1.25;
     font-weight: 800;
   }
   
   .hero-description {
-    font-size: 1rem;
-    margin-bottom: 2.2rem;
-    line-height: 1.5;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
     max-width: 100%;
     opacity: 0.95;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
   }
   
   .announcement-badge {
-    margin-bottom: 1.5rem;
-    padding: 0.4rem 0.8rem;
-    border-radius: 20px;
+    margin-bottom: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
   }
   
   .badge-text {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-weight: 600;
+    line-height: 1.3;
   }
   
   .badge-icon {
@@ -854,15 +855,15 @@ onMounted(() => {
   }
   
   .cta-primary {
-    padding: 1.3rem 2.2rem;
-    font-size: 1rem;
-    border-radius: 18px;
+    padding: 1.1rem 2rem;
+    font-size: 0.95rem;
+    border-radius: 25px;
     font-weight: 700;
   }
   
   .cta-icon {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
   
   .hero-background {
@@ -885,19 +886,19 @@ onMounted(() => {
   }
   
   .crm-showcase {
-    padding: 1rem 0 3rem 0;
-    margin-top: -1.5rem;
+    padding: 1.5rem 0 3rem 0;
+    margin-top: -1rem;
   }
   
   .crm-dashboard {
     padding: 1rem;
-    border-radius: 18px;
+    border-radius: 16px;
   }
   
   .dashboard-header {
     padding: 0.9rem 1.2rem;
     margin: -1rem -1rem 1rem -1rem;
-    border-radius: 18px 18px 0 0;
+    border-radius: 16px 16px 0 0;
     position: relative;
     z-index: 3;
   }
@@ -907,6 +908,7 @@ onMounted(() => {
     font-weight: 600;
     z-index: 3;
     position: relative;
+    line-height: 1.4;
   }
   
   .dashboard-title span {
@@ -922,7 +924,7 @@ onMounted(() => {
   }
   
   .crm-screen {
-    height: 280px;
+    height: 250px;
     border-radius: 12px;
   }
   
@@ -931,7 +933,7 @@ onMounted(() => {
   }
   
   .crm-description p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.6;
     font-weight: 500;
     max-width: 100%;
@@ -955,7 +957,7 @@ onMounted(() => {
 
 @media screen and (max-width: 768px) {
   .crm-showcase {
-    padding: 2rem 0 4rem 0;
+    padding: 2.5rem 0 4rem 0;
   }
   
   .crm-dashboard {
@@ -969,34 +971,35 @@ onMounted(() => {
   }
   
   .dashboard-title {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
   }
   
   .crm-screen {
-    height: 320px;
+    height: 300px;
   }
   
   .crm-description p {
     font-size: 1.1rem;
-    line-height: 1.5;
+    line-height: 1.6;
   }
 }
 
 @media screen and (max-width: 480px) {
   .crm-showcase {
-    padding: 1rem 0 3rem 0;
-    margin-top: -1.5rem;
+    padding: 1.5rem 0 3rem 0;
+    margin-top: -1rem;
   }
   
   .crm-dashboard {
     padding: 1rem;
-    border-radius: 18px;
+    border-radius: 16px;
   }
   
   .dashboard-header {
     padding: 0.9rem 1.2rem;
     margin: -1rem -1rem 1rem -1rem;
-    border-radius: 18px 18px 0 0;
+    border-radius: 16px 16px 0 0;
     position: relative;
     z-index: 3;
   }
@@ -1017,6 +1020,7 @@ onMounted(() => {
     font-weight: 600;
     z-index: 3;
     position: relative;
+    line-height: 1.4;
   }
   
   .dashboard-title span {
@@ -1039,7 +1043,7 @@ onMounted(() => {
   }
   
   .crm-screen {
-    height: 280px;
+    height: 250px;
     border-radius: 12px;
   }
   
@@ -1048,7 +1052,7 @@ onMounted(() => {
   }
   
   .crm-description p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.6;
     font-weight: 500;
     max-width: 100%;
