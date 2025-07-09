@@ -117,16 +117,15 @@
                   </div>
                 </div>
                 <div class="video-container">
-                  <video 
-                    autoplay 
-                    muted 
-                    loop 
-                    playsinline
+                  <iframe 
+                    src="https://www.loom.com/embed/e5e30e859c1b483fa96aa972391b8fe7?sid=f1365495-6513-41f1-8aeb-efbeeec73bdd" 
+                    frameborder="0" 
+                    webkitallowfullscreen 
+                    mozallowfullscreen 
+                    allowfullscreen
                     class="demo-video"
-                  >
-                    <source src="~/assets/videos/agent-demo.mp4" type="video/mp4">
-                    Seu navegador não suporta vídeo HTML5.
-                  </video>
+                    style="width: 100%; height: 100%;"
+                  ></iframe>
                 </div>
               </div>
             </div>

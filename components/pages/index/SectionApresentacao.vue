@@ -45,6 +45,50 @@
       </div>
     </div>
   </section>
+
+  <!-- CRM Dashboard Section -->
+  <section class="crm-showcase">
+    <!-- Gradient Transition -->
+    <div class="section-gradient"></div>
+    
+    <div class="container">
+      <div class="crm-content">
+        <!-- Main CRM Dashboard -->
+        <div class="crm-dashboard" data-aos="zoom-in" data-aos-delay="200">
+          <div class="dashboard-header">
+            <div class="dashboard-controls">
+              <div class="control-dot red"></div>
+              <div class="control-dot yellow"></div>
+              <div class="control-dot green"></div>
+            </div>
+            <div class="dashboard-title">
+              <span>Implemente as Nossas Soluções E Gere Oportunidades Diárias</span>
+              <div class="live-indicator">
+                <div class="live-dot"></div>
+                <span>PLUG AND PLAY</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Print do CRM -->
+          <div class="crm-screen">
+            <img 
+              src="/assets/images/printcrmrociamdigital.webp" 
+              alt="Print do CRM Rociam Digital com leads gerados"
+              class="crm-image"
+            />
+          </div>
+        </div>
+
+        <!-- Bottom Text -->
+        <div class="crm-description" data-aos="fade-up" data-aos-delay="300">
+          <p>Resultados reais de clientes que confiam na nossa metodologia</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ...existing code... -->
 </template>
 
 <script setup>
@@ -86,14 +130,14 @@ onMounted(() => {
 .hero-background {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 30%;
   width: 100%;
   height: 100%;
-  background-image: url('/assets/images/pexels-pixabay-315938.jpg');
-  background-size: cover;
-  background-position: center;
+  background-image: url('/assets/images/bgrociamdigital.webp');
+  background-size: auto; /* Ajusta a imagem para cobrir todo o fundo */
+  background-position: center; /* Posiciona a imagem à direita */
   background-repeat: no-repeat;
-  opacity: 0.4;
+  opacity: 0.35;
   z-index: 0;
   animation: subtle-movement 12s ease-in-out infinite;
   transform-origin: center center;
@@ -430,6 +474,176 @@ onMounted(() => {
   transform: translateX(3px);
 }
 
+/* CRM Dashboard Section */
+.crm-showcase {
+  position: relative;
+  padding: 0 0 6rem 0;
+  background: #0d0d0d;
+  overflow: hidden;
+}
+
+/* Gradient Transition */
+.section-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(180deg, #000000 0%, transparent 100%);
+  z-index: 1;
+}
+
+/* CRM Content */
+.crm-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Main CRM Dashboard */
+.crm-dashboard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 1.5rem;
+  backdrop-filter: blur(20px);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.crm-dashboard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 30%, rgba(0, 204, 153, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 70% 70%, rgba(0, 51, 255, 0.06) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px 12px 0 0;
+  padding: 1rem 1.5rem;
+  margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.dashboard-controls {
+  position: absolute;
+  left: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.control-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.control-dot.red {
+  background: #ff5f57;
+}
+
+.control-dot.yellow {
+  background: #ffbd2e;
+}
+
+.control-dot.green {
+  background: #28ca42;
+}
+
+.dashboard-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--cor-branco);
+  font-family: var(--regular);
+  font-size: 0.9rem;
+}
+
+.live-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(40, 202, 66, 0.2);
+  border: 1px solid rgba(40, 202, 66, 0.3);
+  border-radius: 20px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-family: var(--bold);
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  background: #28ca42;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+/* CRM Screen */
+.crm-screen {
+  width: 100%;
+  height: 400px;
+  background: #0a0a0a;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.crm-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.crm-image:hover {
+  transform: scale(1.02);
+}
+
+/* CRM Description */
+.crm-description {
+  margin-top: 2rem;
+}
+
+.crm-description p {
+  font-family: var(--regular);
+  font-size: 1.1rem;
+  color: var(--cor-gelo);
+  opacity: 0.8;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Animações AOS */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
 /* Otimizações de performance e acessibilidade */
 @media (prefers-reduced-motion: reduce) {
   .hero-background {
@@ -470,6 +684,43 @@ onMounted(() => {
   .announcement-badge {
     margin-bottom: 2rem;
     padding: 0.3rem 0.7rem;
+  }
+  
+  .crm-showcase {
+    padding: 0 0 3rem 0;
+  }
+  
+  .floating-card {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .card-1 {
+    left: 5%;
+  }
+  
+  .card-2 {
+    right: 5%;
+  }
+  
+  .card-3 {
+    left: 65%;
+  }
+  
+  .crm-dashboard {
+    padding: 1.25rem;
+  }
+  
+  .crm-screen {
+    height: 350px;
+  }
+  
+  .placeholder-stats {
+    gap: 1.5rem;
+  }
+  
+  .stat-number {
+    font-size: 1.75rem;
   }
 }
 
@@ -525,6 +776,46 @@ onMounted(() => {
   
   .particles {
     opacity: 0.5; /* Reduz intensidade das partículas em tablet */
+  }
+  
+  .crm-showcase {
+    min-height: auto;
+    padding: 0 0 3rem 0;
+  }
+  
+  .crm-dashboard {
+    padding: 1rem;
+    border-radius: 20px;
+  }
+  
+  .dashboard-header {
+    padding: 0.875rem 1.25rem;
+    margin: -1rem -1rem 1rem -1rem;
+  }
+  
+  .dashboard-title {
+    font-size: 0.8rem;
+  }
+  
+  .crm-screen {
+    height: 300px;
+  }
+  
+  .placeholder-content h3 {
+    font-size: 1.25rem;
+  }
+  
+  .placeholder-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+  
+  .crm-description p {
+    font-size: 1rem;
   }
 }
 
@@ -590,6 +881,138 @@ onMounted(() => {
   
   .particles {
     display: none; /* Remove partículas em telas muito pequenas */
+  }
+}
+
+/* CRM Section Responsive */
+@media screen and (max-width: 1140px) {
+  .crm-showcase {
+    padding: 0 0 3rem 0;
+  }
+  
+  .crm-dashboard {
+    padding: 1.25rem;
+  }
+  
+  .crm-screen {
+    height: 350px;
+  }
+  
+  .placeholder-stats {
+    gap: 1.5rem;
+  }
+  
+  .stat-number {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .crm-showcase {
+    min-height: auto;
+    padding: 2rem 0 3rem 0;
+  }
+  
+  .floating-elements {
+    position: static;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .floating-card {
+    position: static;
+    animation: none;
+    padding: 0.5rem 0.875rem;
+    font-size: 0.8rem;
+  }
+  
+  .crm-dashboard {
+    padding: 1rem;
+    border-radius: 20px;
+  }
+  
+  .dashboard-header {
+    padding: 0.875rem 1.25rem;
+    margin: -1rem -1rem 1rem -1rem;
+  }
+  
+  .dashboard-title {
+    font-size: 0.8rem;
+  }
+  
+  .crm-screen {
+    height: 300px;
+  }
+  
+  .placeholder-content h3 {
+    font-size: 1.25rem;
+  }
+  
+  .placeholder-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+  
+  .crm-description p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .crm-showcase {
+    padding: 0 0 2rem 0;
+  }
+  
+  .crm-dashboard {
+    padding: 0.875rem;
+    border-radius: 16px;
+  }
+  
+  .dashboard-header {
+    padding: 0.75rem 1rem;
+    margin: -0.875rem -0.875rem 0.875rem -0.875rem;
+  }
+  
+  .dashboard-title {
+    font-size: 0.75rem;
+  }
+  
+  .live-indicator {
+    padding: 0.2rem 0.6rem;
+    font-size: 0.7rem;
+  }
+  
+  .crm-screen {
+    height: 250px;
+    border-radius: 10px;
+  }
+  
+  .placeholder-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .placeholder-content p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .stat-number {
+    font-size: 1.25rem;
+  }
+  
+  .stat-label {
+    font-size: 0.75rem;
+  }
+  
+  .crm-description p {
+    font-size: 0.9rem;
   }
 }
 </style>
