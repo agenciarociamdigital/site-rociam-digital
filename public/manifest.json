@@ -1,0 +1,21 @@
+{
+  "name": "Rociam Digital",
+  "short_name": "Rociam",
+  "description": "Soluções Modernas em Marketing Digital",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#00cc99",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
