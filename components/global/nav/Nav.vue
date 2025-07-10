@@ -542,8 +542,8 @@ onUnmounted(() => {
   }
   
   .logo-image {
-    height: 48px;
-    max-width: 180px;
+    height: 72px;
+    max-width: 280px;
     position: static;
     top: auto;
     left: auto;
@@ -565,7 +565,7 @@ onUnmounted(() => {
     border: none !important;
     box-shadow: none !important;
     border-radius: 0 !important;
-    padding: 0.8rem;
+    padding: 1rem;
     position: relative;
     z-index: 1001;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -579,6 +579,11 @@ onUnmounted(() => {
   
   .mobile-toggle:active {
     transform: scale(0.95);
+  }
+
+  .hamburger-line {
+    width: 24px;
+    height: 3px;
   }
 
   /* Menu mobile em tela cheia */
@@ -693,6 +698,33 @@ onUnmounted(() => {
   
   .nav-indicator {
     display: none;
+  }
+}
+
+/* Telas muito pequenas */
+@media screen and (max-width: 480px) {
+  .header {
+    top: 0.5rem;
+    width: 98%;
+    padding: 0.25rem 0;
+  }
+  
+  .container {
+    padding: 0 0.75rem;
+  }
+  
+  .logo-image {
+    height: 64px;
+    max-width: 240px;
+  }
+  
+  .mobile-toggle {
+    padding: 0.75rem;
+  }
+  
+  .hamburger-line {
+    width: 24px;
+    height: 3px;
   }
 }
 </style>
