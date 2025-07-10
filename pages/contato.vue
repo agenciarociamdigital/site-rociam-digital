@@ -132,8 +132,11 @@
                     </svg>
                   </div>
                   <div class="contact-details">
-                    <h4>Telefone</h4>
-                    <p>(51) 98243-5512</p>
+                    <h4>WhatsApp</h4>
+                    <p>(55) 51 98245-5694</p>
+                    <a :href="useStoreWhatsapp().abrirLink('Olá, eu vim do site da empresa e tenho interesse nas soluções da Rociam Digital, pode me ajudar?')" target="_blank" class="whatsapp-link">
+                      Conversar no WhatsApp
+                    </a>
                   </div>
                 </div>
                 
@@ -186,6 +189,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useStoreWhatsapp } from '@/stores/storeWhatsapp'
 
 // Meta tags para SEO (temporariamente comentado)
 // useHead({
@@ -535,6 +539,28 @@ onMounted(() => {
   font-size: var(--f2);
   color: var(--cor-gelo);
   opacity: 0.9;
+}
+
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: var(--cor-branco);
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-family: var(--bold);
+  font-size: var(--f1);
+  margin-top: 0.75rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+  background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
 }
 
 /* Mapa */
