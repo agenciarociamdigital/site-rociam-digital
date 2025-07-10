@@ -16,20 +16,20 @@
         <div class="container">
           <div class="hero-content">
             <div class="hero-badge" data-aos="fade-down">
-              <span class="badge-icon">📈</span>
+              <span class="badge-icon">�</span>
               <span>Solução Especializada</span>
               <svg class="badge-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path d="m9 18 6-6-6-6"/>
               </svg>
             </div>
               <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
-              <span class="title-highlight">Análise de Dados</span>
-              <br>e Otimização
+              <span class="title-highlight">WhatsApp e</span>
+              <br>E-mail Marketing
             </h1>
             
             <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
-              Transforme dados em decisões estratégicas
-              <br>que otimizam suas ações de marketing.
+              Potencialize seu relacionamento com clientes
+              <br>através de comunicação estratégica.
             </p>
             
             <div class="hero-cta" data-aos="fade-up" data-aos-delay="300">
@@ -53,9 +53,9 @@ import { onMounted } from 'vue'
 
 // SEO Meta
 useHead({
-  title: 'Análise de Dados e Otimização - Rociam Digital',
+  title: 'WhatsApp e E-mail Marketing - Rociam Digital',
   meta: [
-    { name: 'description', content: 'Transforme dados brutos em decisões estratégicas. Monitore e analise o desempenho de suas campanhas para otimizar resultados em tempo real.' }
+    { name: 'description', content: 'Potencialize seu relacionamento com clientes através de campanhas estratégicas de WhatsApp Business e e-mail marketing. Fluxos automatizados que convertem leads em vendas.' }
   ]
 })
 

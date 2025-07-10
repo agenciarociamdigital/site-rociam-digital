@@ -52,17 +52,69 @@ onUnmounted(() => {
   box-shadow: 0 2px 12px rgba(0,0,0,0.07);
   transition: background 0.2s, box-shadow 0.2s, transform 0.18s;
   padding: 0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
+
 .botao-voltar-topo:hover {
   background: rgba(0,51,255,0.08);
   box-shadow: 0 4px 18px rgba(0,51,255,0.10);
   transform: translateY(-2px) scale(1.08);
 }
+
 .icone-seta {
   width: 22px;
   height: 22px;
   display: block;
 }
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .botao-voltar-topo {
+    left: 1rem;
+    right: auto;
+    bottom: 1rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(0, 51, 255, 0.9);
+    border: none;
+    box-shadow: 0 4px 20px rgba(0, 51, 255, 0.3);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+  }
+  
+  .botao-voltar-topo:hover {
+    background: rgba(0, 51, 255, 1);
+    box-shadow: 0 6px 25px rgba(0, 51, 255, 0.4);
+    transform: translateY(-3px) scale(1.1);
+  }
+  
+  .icone-seta {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .icone-seta path {
+    stroke: var(--cor-branco);
+    stroke-width: 2.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .botao-voltar-topo {
+    left: 0.8rem;
+    bottom: 0.8rem;
+    width: 44px;
+    height: 44px;
+  }
+  
+  .icone-seta {
+    width: 22px;
+    height: 22px;
+  }
+}
+
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.3s;
 }

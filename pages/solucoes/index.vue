@@ -83,7 +83,7 @@
                     <line x1="6" x2="6" y1="20" y2="16"/>
                   </svg>
                 </div>
-                <span>Analytics</span>
+                <span>WhatsApp Marketing</span>
               </div>
             </div>
           </div>
@@ -117,15 +117,16 @@
                   </div>
                 </div>
                 <div class="video-container">
-                  <iframe 
-                    src="https://www.loom.com/embed/e5e30e859c1b483fa96aa972391b8fe7?sid=f1365495-6513-41f1-8aeb-efbeeec73bdd" 
-                    frameborder="0" 
-                    webkitallowfullscreen 
-                    mozallowfullscreen 
-                    allowfullscreen
+                  <video 
+                    autoplay 
+                    muted 
+                    loop 
+                    playsinline
                     class="demo-video"
-                    style="width: 100%; height: 100%;"
-                  ></iframe>
+                  >
+                    <source src="~/assets/videos/captacao.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeo HTML5.
+                  </video>
                 </div>
               </div>
             </div>
@@ -174,7 +175,7 @@
                     playsinline
                     class="demo-video"
                   >
-                    <source src="~/assets/videos/agent-demo.mp4" type="video/mp4">
+                    <source src="~/assets/videos/trafegopago.mp4" type="video/mp4">
                     Seu navegador não suporta vídeo HTML5.
                   </video>
                 </div>
@@ -227,7 +228,7 @@
                     playsinline
                     class="demo-video"
                   >
-                    <source src="~/assets/videos/agent-demo.mp4" type="video/mp4">
+                    <source src="~/assets/videos/desenvolvimentoweb.mp4" type="video/mp4">
                     Seu navegador não suporta vídeo HTML5.
                   </video>
                 </div>
@@ -279,7 +280,7 @@
                     playsinline
                     class="demo-video"
                   >
-                    <source src="~/assets/videos/agent-demo.mp4" type="video/mp4">
+                    <source src="~/assets/videos/crm.mp4" type="video/mp4">
                     Seu navegador não suporta vídeo HTML5.
                   </video>
                 </div>
@@ -301,7 +302,7 @@
             </div>
           </div>
 
-          <!-- Solução 5: Analytics -->
+          <!-- Solução 5: WhatsApp e E-mail Marketing -->
           <div class="solution-item" data-aos="fade-up" data-aos-delay="500">
             <div class="solution-image">
               <div class="video-screen-share">
@@ -313,11 +314,9 @@
                   </div>
                   <div class="screen-title">
                     <svg class="share-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                      <line x1="12" x2="12" y1="20" y2="10"/>
-                      <line x1="18" x2="18" y1="20" y2="4"/>
-                      <line x1="6" x2="6" y1="20" y2="16"/>
+                      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
                     </svg>
-                    <span>Demonstração - Analytics</span>
+                    <span>Demonstração - WhatsApp Marketing</span>
                     <div class="recording-indicator">
                       <div class="recording-dot"></div>
                       <span>REC</span>
@@ -332,20 +331,20 @@
                     playsinline
                     class="demo-video"
                   >
-                    <source src="~/assets/videos/agent-demo.mp4" type="video/mp4">
+                    <source src="~/assets/videos/whatsappmarketing.mp4" type="video/mp4">
                     Seu navegador não suporta vídeo HTML5.
                   </video>
                 </div>
               </div>
             </div>
-            <div class="solution-content">              <h3>Análise de Dados e Otimização</h3>
+            <div class="solution-content">              <h3>WhatsApp e E-mail Marketing</h3>
               <p>
-                Transforme dados brutos em decisões estratégicas com nossas soluções avançadas de 
-                analytics. Monitoramos e analisamos o desempenho de suas campanhas, extraindo insights 
-                valiosos para otimizar suas ações de marketing, reduzir custos e alcançar melhores 
-                resultados em tempo real.
+                Potencialize seu relacionamento com clientes através de campanhas estratégicas de 
+                WhatsApp Business e e-mail marketing. Criamos fluxos automatizados de comunicação, 
+                aumentamos o engajamento e convertemos leads em vendas com mensagens personalizadas 
+                e segmentadas que geram resultados efetivos.
               </p>
-              <NuxtLink to="/solucoes/analytics" class="cta-button">
+              <NuxtLink to="/solucoes/whatsapp-marketing" class="cta-button">
                 <span>Conheça Agora</span>
                 <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <path d="m9 18 6-6-6-6"/>

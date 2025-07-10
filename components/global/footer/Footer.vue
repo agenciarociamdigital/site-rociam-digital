@@ -55,7 +55,7 @@
             <li><a href="/solucoes/trafego-pago">Gestão de Tráfego Pago</a></li>
             <li><a href="/solucoes/desenvolvimento-web">Desenvolvimento Web Estratégico</a></li>
             <li><a href="/solucoes/crm">Implementação e Otimização de CRM</a></li>
-            <li><a href="/solucoes/analytics">Análise de Dados e Otimização</a></li>
+            <li><a href="/solucoes/whatsapp-marketing">WhatsApp e E-mail Marketing</a></li>
           </ul>
         </div>
 

@@ -9,7 +9,7 @@ export default defineNuxtRouteMiddleware((to) => {
     '/solucoes/trafego-pago',
     '/solucoes/desenvolvimento-web',
     '/solucoes/crm',
-    '/solucoes/analytics',
+    '/solucoes/whatsapp-marketing',
     '/erro',
     '/politica-de-privacidade',
     '/termos-de-uso'
