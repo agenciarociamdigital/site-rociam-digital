@@ -762,7 +762,7 @@ onMounted(() => {
   }
   
   .hero-background {
-    opacity: 0.25;
+    opacity: 0.4;
     animation-duration: 25s;
   }
   
@@ -867,7 +867,7 @@ onMounted(() => {
   }
   
   .hero-background {
-    opacity: 0.2;
+    opacity: 0.35;
     animation-duration: 35s;
   }
   
