@@ -14,30 +14,36 @@
         </div>
 
         <!-- Menu Desktop -->
-        <div class="nav-menu" :class="{ 'nav-menu-active': isMobileMenuOpen }">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <NuxtLink to="/" class="nav-link" @click="closeMobileMenu">
+        <div 
+          class="nav-menu" 
+          :class="{ 'nav-menu-active': isMobileMenuOpen }"
+          id="mobile-navigation"
+          role="navigation"
+          :aria-hidden="!isMobileMenuOpen"
+        >
+          <ul class="nav-list" role="menubar">
+            <li class="nav-item" role="none">
+              <NuxtLink to="/" class="nav-link" @click="closeMobileMenu" role="menuitem">
                 <span class="nav-text">Home</span>
-                <div class="nav-indicator"></div>
+                <div class="nav-indicator" aria-hidden="true"></div>
               </NuxtLink>
             </li>
-            <li class="nav-item">
-              <NuxtLink to="/sobre" class="nav-link" @click="closeMobileMenu">
+            <li class="nav-item" role="none">
+              <NuxtLink to="/sobre" class="nav-link" @click="closeMobileMenu" role="menuitem">
                 <span class="nav-text">Sobre</span>
-                <div class="nav-indicator"></div>
+                <div class="nav-indicator" aria-hidden="true"></div>
               </NuxtLink>
             </li>
-            <li class="nav-item">
-              <NuxtLink to="/solucoes" class="nav-link" @click="closeMobileMenu">
+            <li class="nav-item" role="none">
+              <NuxtLink to="/solucoes" class="nav-link" @click="closeMobileMenu" role="menuitem">
                 <span class="nav-text">Soluções</span>
-                <div class="nav-indicator"></div>
+                <div class="nav-indicator" aria-hidden="true"></div>
               </NuxtLink>
             </li>
-            <li class="nav-item">
-              <NuxtLink to="/contato" class="nav-link" @click="closeMobileMenu">
+            <li class="nav-item" role="none">
+              <NuxtLink to="/contato" class="nav-link" @click="closeMobileMenu" role="menuitem">
                 <span class="nav-text">Contato</span>
-                <div class="nav-indicator"></div>
+                <div class="nav-indicator" aria-hidden="true"></div>
               </NuxtLink>
             </li>
           </ul>
@@ -45,9 +51,13 @@
 
         <!-- CTA Button -->
         <div class="nav-cta">
-          <button class="cta-button" @click="handleContactClick">
+          <button 
+            class="cta-button" 
+            @click="handleContactClick"
+            aria-label="Abrir formulário de contato"
+          >
             <span class="cta-text">Entrar em Contato</span>
-            <div class="cta-icon-wrapper">
+            <div class="cta-icon-wrapper" aria-hidden="true">
               <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path d="m9 18 6-6-6-6"/>
               </svg>
@@ -60,10 +70,13 @@
           class="mobile-toggle" 
           @click="toggleMobileMenu"
           :class="{ 'mobile-toggle-active': isMobileMenuOpen }"
+          :aria-label="isMobileMenuOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação'"
+          :aria-expanded="isMobileMenuOpen"
+          aria-controls="mobile-navigation"
         >
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
+          <span class="hamburger-line" aria-hidden="true"></span>
+          <span class="hamburger-line" aria-hidden="true"></span>
+          <span class="hamburger-line" aria-hidden="true"></span>
         </button>
       </nav>
     </div>

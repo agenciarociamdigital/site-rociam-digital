@@ -92,10 +92,11 @@
                 type="submit" 
                 class="submit-button"
                 :disabled="isSubmitting"
+                aria-label="Enviar formulário de contato"
               >
                 <span v-if="!isSubmitting">Enviar Mensagem</span>
                 <span v-else>Enviando...</span>
-                <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                   <path d="m9 18 6-6-6-6"/>
                 </svg>
               </button>
@@ -112,7 +113,7 @@
               </div>
               <h3>Mensagem Enviada!</h3>
               <p>Sua mensagem foi enviada com sucesso. Retornaremos o contato em breve!</p>
-              <button @click="closePopup" class="popup-button">
+              <button @click="closePopup" class="popup-button" aria-label="Fechar popup de confirmação">
                 Fechar
               </button>
             </div>

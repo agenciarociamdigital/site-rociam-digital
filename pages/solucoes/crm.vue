@@ -18,7 +18,7 @@
             <div class="hero-badge" data-aos="fade-down">
               <span class="badge-icon">📊</span>
               <span>Solução Especializada</span>
-              <svg class="badge-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <svg class="badge-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                 <path d="m9 18 6-6-6-6"/>
               </svg>
             </div>
@@ -33,9 +33,9 @@
             </p>
             
             <div class="hero-cta" data-aos="fade-up" data-aos-delay="300">
-              <NuxtLink to="/contato" class="cta-primary">
+              <NuxtLink to="/contato" class="cta-primary" aria-label="Entre em contato para falar com um especialista sobre CRM">
                 <span>Falar com Especialista</span>
-                <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                   <path d="m9 18 6-6-6-6"/>
                 </svg>
               </NuxtLink>

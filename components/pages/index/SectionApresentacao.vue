@@ -17,7 +17,7 @@
       <!-- Badge de Anúncio -->
       <div class="announcement-badge" data-aos="fade-down" data-aos-delay="100">
         <span class="badge-text">Tecnologia, Inteligência Artificial e Estratégia</span>
-        <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
           <path d="m9 18 6-6-6-6"/>
         </svg>
       </div>
@@ -35,9 +35,9 @@
 
         <!-- CTA Button -->
         <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
-          <button class="cta-primary" @click="handleStartBuilding">
+          <button class="cta-primary" @click="handleStartBuilding" aria-label="Ver nossas soluções de marketing digital">
             <span>Nossas Soluções</span>
-            <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
               <path d="m9 18 6-6-6-6"/>
             </svg>
           </button>

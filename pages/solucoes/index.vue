@@ -18,7 +18,7 @@
             <div class="hero-badge" data-aos="fade-down">
               <span class="badge-icon">🚀</span>
               <span>Soluções Digitais de Alta Performance</span>
-              <svg class="badge-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <svg class="badge-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                 <path d="m9 18 6-6-6-6"/>
               </svg>
             </div>
@@ -123,6 +123,8 @@
                     loop 
                     playsinline
                     class="demo-video"
+                    aria-label="Demonstração da solução de Geração de Leads Qualificados"
+                    role="img"
                   >
                     <source src="~/assets/videos/captacao.mp4" type="video/mp4">
                     Seu navegador não suporta vídeo HTML5.
@@ -137,9 +139,13 @@
                 garantindo leads mais qualificados e aumentando significativamente suas chances 
                 de conversão e crescimento sustentável.
               </p>
-              <NuxtLink to="/solucoes/geracao-de-leads" class="cta-button">
+              <NuxtLink 
+                to="/solucoes/geracao-de-leads" 
+                class="cta-button"
+                aria-label="Saiba mais sobre nossa solução de Geração de Leads Qualificados"
+              >
                 <span>Conheça Agora</span>
-                <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                   <path d="m9 18 6-6-6-6"/>
                 </svg>
               </NuxtLink>
@@ -174,6 +180,8 @@
                     loop 
                     playsinline
                     class="demo-video"
+                    aria-label="Demonstração da solução de Gestão de Tráfego Pago"
+                    role="img"
                   >
                     <source src="~/assets/videos/trafegopago.mp4" type="video/mp4">
                     Seu navegador não suporta vídeo HTML5.
@@ -188,9 +196,13 @@
                 o público ideal para o seu negócio, garantindo conversões rápidas e impulsionando 
                 suas vendas.
               </p>
-              <NuxtLink to="/solucoes/trafego-pago" class="cta-button">
+              <NuxtLink 
+                to="/solucoes/trafego-pago" 
+                class="cta-button"
+                aria-label="Saiba mais sobre nossa solução de Gestão de Tráfego Pago"
+              >
                 <span>Conheça Agora</span>
-                <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                   <path d="m9 18 6-6-6-6"/>
                 </svg>
               </NuxtLink>
@@ -227,6 +239,8 @@
                     loop 
                     playsinline
                     class="demo-video"
+                    aria-label="Demonstração da solução de Desenvolvimento Web Estratégico"
+                    role="img"
                   >
                     <source src="~/assets/videos/desenvolvimentoweb.mp4" type="video/mp4">
                     Seu navegador não suporta vídeo HTML5.
@@ -240,9 +254,13 @@
                 performance, totalmente personalizados para os seus objetivos. Criamos experiências 
                 digitais que convertem visitantes em clientes e fortalecem sua presença online.
               </p>
-              <NuxtLink to="/solucoes/desenvolvimento-web" class="cta-button">
+              <NuxtLink 
+                to="/solucoes/desenvolvimento-web" 
+                class="cta-button"
+                aria-label="Saiba mais sobre nossa solução de Desenvolvimento Web Estratégico"
+              >
                 <span>Conheça Agora</span>
-                <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                   <path d="m9 18 6-6-6-6"/>
                 </svg>
               </NuxtLink>
@@ -279,6 +297,8 @@
                     loop 
                     playsinline
                     class="demo-video"
+                    aria-label="Demonstração da solução de Implementação e Otimização de CRM"
+                    role="img"
                   >
                     <source src="~/assets/videos/crm.mp4" type="video/mp4">
                     Seu navegador não suporta vídeo HTML5.
@@ -293,9 +313,13 @@
                 relacionamentos duradouros, impulsionando a eficiência da sua equipe e aumentando 
                 as taxas de conversão.
               </p>
-              <NuxtLink to="/solucoes/crm" class="cta-button">
+              <NuxtLink 
+                to="/solucoes/crm" 
+                class="cta-button"
+                aria-label="Saiba mais sobre nossa solução de Implementação e Otimização de CRM"
+              >
                 <span>Conheça Agora</span>
-                <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                   <path d="m9 18 6-6-6-6"/>
                 </svg>
               </NuxtLink>
@@ -330,6 +354,8 @@
                     loop 
                     playsinline
                     class="demo-video"
+                    aria-label="Demonstração da solução de WhatsApp e E-mail Marketing"
+                    role="img"
                   >
                     <source src="~/assets/videos/whatsappmarketing.mp4" type="video/mp4">
                     Seu navegador não suporta vídeo HTML5.
@@ -344,9 +370,13 @@
                 aumentamos o engajamento e convertemos leads em vendas com mensagens personalizadas 
                 e segmentadas que geram resultados efetivos.
               </p>
-              <NuxtLink to="/solucoes/whatsapp-marketing" class="cta-button">
+              <NuxtLink 
+                to="/solucoes/whatsapp-marketing" 
+                class="cta-button"
+                aria-label="Saiba mais sobre nossa solução de WhatsApp e E-mail Marketing"
+              >
                 <span>Conheça Agora</span>
-                <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                   <path d="m9 18 6-6-6-6"/>
                 </svg>
               </NuxtLink>
@@ -366,9 +396,13 @@
                 o crescimento da sua empresa.
               </p>
             </div>
-            <NuxtLink to="/contato" class="main-cta-button">
+            <NuxtLink 
+              to="/contato" 
+              class="main-cta-button"
+              aria-label="Entre em contato para falar com um especialista sobre nossas soluções"
+            >
               <span>Falar com Especialista</span>
-              <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                 <path d="m9 18 6-6-6-6"/>
               </svg>
             </NuxtLink>
